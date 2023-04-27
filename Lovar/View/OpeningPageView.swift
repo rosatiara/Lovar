@@ -8,8 +8,24 @@
 import SwiftUI
 
 struct OpeningPageView: View {
+    @State private var goToGardenPageView = false
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack {
+            Image("openingBg")
+                .resizable()
+                .edgesIgnoringSafeArea(.all)
+            VStack {
+                Image("lovar")
+                Image("lovarcat")
+                    .offset(y: 270)
+            }
+            
+        }
+        .onTapGesture{goToGardenPageView = true}
+        .fullScreenCover(isPresented: $goToGardenPageView) {
+            GardenPageView()
+        }
     }
 }
 
