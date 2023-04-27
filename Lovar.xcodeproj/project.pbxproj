@@ -16,6 +16,14 @@
 		31045B3E29FA0D8200F2E9F1 /* LovarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31045B3D29FA0D8200F2E9F1 /* LovarTests.swift */; };
 		31045B4829FA0D8200F2E9F1 /* LovarUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31045B4729FA0D8200F2E9F1 /* LovarUITests.swift */; };
 		31045B4A29FA0D8200F2E9F1 /* LovarUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31045B4929FA0D8200F2E9F1 /* LovarUITestsLaunchTests.swift */; };
+		31045B5C29FA13FF00F2E9F1 /* GardenPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31045B5B29FA13FF00F2E9F1 /* GardenPageView.swift */; };
+		31045B5E29FA140D00F2E9F1 /* OpeningPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31045B5D29FA140D00F2E9F1 /* OpeningPageView.swift */; };
+		31045B6129FA144800F2E9F1 /* HistoryPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31045B6029FA144800F2E9F1 /* HistoryPageView.swift */; };
+		31045B6329FA145B00F2E9F1 /* BingoPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31045B6229FA145B00F2E9F1 /* BingoPageView.swift */; };
+		31045B6929FA14AB00F2E9F1 /* GardenHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31045B6829FA14AB00F2E9F1 /* GardenHistoryView.swift */; };
+		31045B6B29FA14B700F2E9F1 /* BingoHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31045B6A29FA14B700F2E9F1 /* BingoHistoryView.swift */; };
+		31045B6E29FA15B800F2E9F1 /* GardenItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31045B6D29FA15B800F2E9F1 /* GardenItemView.swift */; };
+		31045B7029FA15C500F2E9F1 /* ProgressBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31045B6F29FA15C500F2E9F1 /* ProgressBarView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +57,14 @@
 		31045B4329FA0D8200F2E9F1 /* LovarUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LovarUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		31045B4729FA0D8200F2E9F1 /* LovarUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LovarUITests.swift; sourceTree = "<group>"; };
 		31045B4929FA0D8200F2E9F1 /* LovarUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LovarUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		31045B5B29FA13FF00F2E9F1 /* GardenPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GardenPageView.swift; sourceTree = "<group>"; };
+		31045B5D29FA140D00F2E9F1 /* OpeningPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpeningPageView.swift; sourceTree = "<group>"; };
+		31045B6029FA144800F2E9F1 /* HistoryPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryPageView.swift; sourceTree = "<group>"; };
+		31045B6229FA145B00F2E9F1 /* BingoPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BingoPageView.swift; sourceTree = "<group>"; };
+		31045B6829FA14AB00F2E9F1 /* GardenHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GardenHistoryView.swift; sourceTree = "<group>"; };
+		31045B6A29FA14B700F2E9F1 /* BingoHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BingoHistoryView.swift; sourceTree = "<group>"; };
+		31045B6D29FA15B800F2E9F1 /* GardenItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GardenItemView.swift; sourceTree = "<group>"; };
+		31045B6F29FA15C500F2E9F1 /* ProgressBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBarView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +115,9 @@
 		31045B2529FA0D8100F2E9F1 /* Lovar */ = {
 			isa = PBXGroup;
 			children = (
+				31045B5829FA12F900F2E9F1 /* ViewModel */,
+				31045B5729FA12F200F2E9F1 /* View */,
+				31045B5629FA12C100F2E9F1 /* Model */,
 				31045B2629FA0D8100F2E9F1 /* LovarApp.swift */,
 				31045B2829FA0D8100F2E9F1 /* ContentView.swift */,
 				31045B2A29FA0D8200F2E9F1 /* Assets.xcassets */,
@@ -133,6 +152,51 @@
 				31045B4929FA0D8200F2E9F1 /* LovarUITestsLaunchTests.swift */,
 			);
 			path = LovarUITests;
+			sourceTree = "<group>";
+		};
+		31045B5629FA12C100F2E9F1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		31045B5729FA12F200F2E9F1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				31045B6C29FA156E00F2E9F1 /* Garden */,
+				31045B6729FA149F00F2E9F1 /* History */,
+				31045B5B29FA13FF00F2E9F1 /* GardenPageView.swift */,
+				31045B5D29FA140D00F2E9F1 /* OpeningPageView.swift */,
+				31045B6029FA144800F2E9F1 /* HistoryPageView.swift */,
+				31045B6229FA145B00F2E9F1 /* BingoPageView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		31045B5829FA12F900F2E9F1 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		31045B6729FA149F00F2E9F1 /* History */ = {
+			isa = PBXGroup;
+			children = (
+				31045B6829FA14AB00F2E9F1 /* GardenHistoryView.swift */,
+				31045B6A29FA14B700F2E9F1 /* BingoHistoryView.swift */,
+			);
+			path = History;
+			sourceTree = "<group>";
+		};
+		31045B6C29FA156E00F2E9F1 /* Garden */ = {
+			isa = PBXGroup;
+			children = (
+				31045B6D29FA15B800F2E9F1 /* GardenItemView.swift */,
+				31045B6F29FA15C500F2E9F1 /* ProgressBarView.swift */,
+			);
+			path = Garden;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -266,8 +330,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				31045B3029FA0D8200F2E9F1 /* Persistence.swift in Sources */,
+				31045B7029FA15C500F2E9F1 /* ProgressBarView.swift in Sources */,
 				31045B2929FA0D8100F2E9F1 /* ContentView.swift in Sources */,
+				31045B5E29FA140D00F2E9F1 /* OpeningPageView.swift in Sources */,
 				31045B3329FA0D8200F2E9F1 /* Lovar.xcdatamodeld in Sources */,
+				31045B6B29FA14B700F2E9F1 /* BingoHistoryView.swift in Sources */,
+				31045B5C29FA13FF00F2E9F1 /* GardenPageView.swift in Sources */,
+				31045B6E29FA15B800F2E9F1 /* GardenItemView.swift in Sources */,
+				31045B6929FA14AB00F2E9F1 /* GardenHistoryView.swift in Sources */,
+				31045B6329FA145B00F2E9F1 /* BingoPageView.swift in Sources */,
+				31045B6129FA144800F2E9F1 /* HistoryPageView.swift in Sources */,
 				31045B2729FA0D8100F2E9F1 /* LovarApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
