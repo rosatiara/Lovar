@@ -8,8 +8,18 @@
 import SwiftUI
 
 struct BingoPageView: View {
+    @State var showDetailView = false
+    
     var body: some View {
-        Text("Hello, World! it's bingo")
+        ZStack {
+            Button("Show detail view") {
+                showDetailView = true
+            }
+            if showDetailView {
+                ItemDetailView(showDetailView: $showDetailView)
+            }
+        }
+        
     }
 }
 

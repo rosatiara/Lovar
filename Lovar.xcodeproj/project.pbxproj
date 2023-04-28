@@ -24,6 +24,7 @@
 		31045B6B29FA14B700F2E9F1 /* BingoHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31045B6A29FA14B700F2E9F1 /* BingoHistoryView.swift */; };
 		31045B6E29FA15B800F2E9F1 /* GardenItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31045B6D29FA15B800F2E9F1 /* GardenItemView.swift */; };
 		31045B7029FA15C500F2E9F1 /* ProgressBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31045B6F29FA15C500F2E9F1 /* ProgressBarView.swift */; };
+		31257C4229FB8E3A00467D6C /* ItemDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31257C4129FB8E3A00467D6C /* ItemDetailView.swift */; };
 		313E20FE29FA3CC600DD5B59 /* Untitled_Artwork 3.png in Resources */ = {isa = PBXBuildFile; fileRef = 313E20FD29FA3CC600DD5B59 /* Untitled_Artwork 3.png */; };
 /* End PBXBuildFile section */
 
@@ -66,6 +67,7 @@
 		31045B6A29FA14B700F2E9F1 /* BingoHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BingoHistoryView.swift; sourceTree = "<group>"; };
 		31045B6D29FA15B800F2E9F1 /* GardenItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GardenItemView.swift; sourceTree = "<group>"; };
 		31045B6F29FA15C500F2E9F1 /* ProgressBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBarView.swift; sourceTree = "<group>"; };
+		31257C4129FB8E3A00467D6C /* ItemDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailView.swift; sourceTree = "<group>"; };
 		313E20FD29FA3CC600DD5B59 /* Untitled_Artwork 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Untitled_Artwork 3.png"; sourceTree = "<group>"; };
 		313E20FF29FA41FA00DD5B59 /* Lovar.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Lovar.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -175,6 +177,7 @@
 				31045B5D29FA140D00F2E9F1 /* OpeningPageView.swift */,
 				31045B6029FA144800F2E9F1 /* HistoryPageView.swift */,
 				31045B6229FA145B00F2E9F1 /* BingoPageView.swift */,
+				31257C4129FB8E3A00467D6C /* ItemDetailView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -345,6 +348,7 @@
 				31045B6E29FA15B800F2E9F1 /* GardenItemView.swift in Sources */,
 				31045B6929FA14AB00F2E9F1 /* GardenHistoryView.swift in Sources */,
 				31045B6329FA145B00F2E9F1 /* BingoPageView.swift in Sources */,
+				31257C4229FB8E3A00467D6C /* ItemDetailView.swift in Sources */,
 				31045B6129FA144800F2E9F1 /* HistoryPageView.swift in Sources */,
 				31045B2729FA0D8100F2E9F1 /* LovarApp.swift in Sources */,
 			);
