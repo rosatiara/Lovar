@@ -15,6 +15,23 @@ struct HistoryPageView: View {
         ZStack {
             Color("cream").edgesIgnoringSafeArea(.all)
             VStack {
+                Spacer()
+                    .frame(height: UIScreen.main.bounds.height*0.05)
+                HStack {
+                    Image(systemName: "chevron.left")
+                        .resizable()
+                        .frame(width: 14, height: 26)
+                        .padding(.leading, 30)
+                        .onTapGesture {
+                            navigateToGardenPageView()
+                        }
+                    Spacer()
+                    Text("Lovar History")
+                        .fontWeight(.heavy)
+                        .font(.system(size: 22))
+                    Spacer()
+                        .frame(width: 120)
+                }
                 TopBar(selected: self.$selected).offset(y:32)
                 if self.selected == 0 {
                     GardenHistory()
@@ -22,16 +39,21 @@ struct HistoryPageView: View {
                     BingoHistory()
                 }
             }
-        }
+        }.foregroundColor(Color("darkBrown"))
         
     }
+    func navigateToGardenPageView() {
+            let gardenPageView = GardenPageView()
+            UIApplication.shared.windows.first?.rootViewController = UIHostingController(rootView: gardenPageView)
+            UIApplication.shared.windows.first?.makeKeyAndVisible()
+        }
 }
 
 struct TopBar: View {
     @Binding var selected: Int
     var body: some View {
-        Spacer()
-            .frame(height: UIScreen.main.bounds.height * 0.1)
+        //        Spacer()
+        //
         HStack {
             Button {
                 self.selected = 0
@@ -42,7 +64,6 @@ struct TopBar: View {
                         .frame(width: 160, height: 70)
                         .foregroundColor(self.selected == 0 ? Color("historySelected") : Color("historyTab"))
                     Text("Garden")
-                        .foregroundColor(Color("darkBrown"))
                         .bold()
                         .padding(.bottom, 15)
                 }
@@ -50,14 +71,13 @@ struct TopBar: View {
             }.overlay(RoundedRectangle(cornerRadius: 10).stroke(Color("darkBrown"), lineWidth: 2))
             Button {
                 self.selected = 1
-
+                
             } label: {
                 ZStack {
                     RoundedRectangle(cornerRadius: 10)
                         .frame(width: 160, height: 70)
                         .foregroundColor(self.selected == 1 ? Color("historySelected") : Color("historyTab"))
                     Text("Bingo")
-                        .foregroundColor(Color("darkBrown"))
                         .bold()
                         .padding(.bottom, 15)
                 }
@@ -94,12 +114,12 @@ struct GardenPicture: View {
     var body: some View {
         VStack {
             ZStack {
-//                Rectangle()
-//                    .frame(width: 90, height: 146)
+                //                Rectangle()
+                //                    .frame(width: 90, height: 146)
                 Image("contoh_garden") // masukkin variable garden picture di sini
                     .resizable()
                     .frame(width: 86, height: 142)
-
+                
             }
             Text("January")
                 .foregroundColor(Color("darkBrown"))
