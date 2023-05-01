@@ -16,7 +16,7 @@ struct HistoryPageView: View {
             Color("cream").edgesIgnoringSafeArea(.all)
             VStack {
                 Spacer()
-                    .frame(height: UIScreen.main.bounds.height*0.05)
+                    .frame(height: UIScreen.main.bounds.height*0.15)
                 HStack {
                     Image(systemName: "chevron.left")
                         .resizable()
@@ -38,6 +38,18 @@ struct HistoryPageView: View {
                 } else {
                     BingoHistory()
                 }
+                HStack() {
+                    Image("flower2")
+                        .offset(x: 0)
+                    Image("flower2")
+                        .offset(x: 0)
+                    Image("flower2")
+                        .offset(x: 0)
+                       
+                }.border(.red)
+                    .frame(width: UIScreen.main.bounds.width)
+                    .offset(y: -60)
+                
             }
         }.foregroundColor(Color("darkBrown"))
         
@@ -103,8 +115,6 @@ struct GardenHistory: View {
                 }.padding(.top, 25)
             }
         }
-        Spacer()
-            .frame(height: UIScreen.main.bounds.height * 0.12)
         
     }
 }
@@ -139,8 +149,6 @@ struct BingoHistory: View {
                 .foregroundColor(Color("historyItemsBg"))
                 .overlay(RoundedRectangle(cornerRadius: 10).stroke(Color("darkBrown"), lineWidth: 2))
         }
-        Spacer()
-            .frame(height: UIScreen.main.bounds.height * 0.12)
     }
 }
 struct HistoryPageView_Previews: PreviewProvider {
