@@ -27,10 +27,9 @@ struct HistoryPageView: View {
                         }
                     Spacer()
                     Text("Lovar History")
-                        .fontWeight(.heavy)
-                        .font(.system(size: 22))
+                        .font(Font.custom("Chivo-Regular", size: 28))
                     Spacer()
-                        .frame(width: 120)
+                        .frame(width: UIScreen.main.bounds.width * 0.25)
                 }
                 TopBar(selected: self.$selected).offset(y:32)
                 if self.selected == 0 {
