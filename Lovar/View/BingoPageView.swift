@@ -15,11 +15,6 @@ struct BingoPageView: View {
     @State private var selectedColumnIndex = 0
     
     var body: some View {
-        
-        /* ----------
-         buat debugging doang, nanti diganti functionality-nya. (.onTapGesture di item bingo)
-         */
-        
         ZStack{
             Color("cream").edgesIgnoringSafeArea(.all)
             VStack {
@@ -74,7 +69,7 @@ struct BingoPageView: View {
 //                    }
 //                }
                 
-            }.border(.red).frame(width: UIScreen.main.bounds.width * 0.5)
+            }.frame(width: UIScreen.main.bounds.width * 0.5)
             .onAppear {
                 bingoCondition = bingoTest.tileCondition
             }
