@@ -10,9 +10,13 @@ import SwiftUI
 struct GardenPageView: View {
     var body: some View {
 
-        Text("Garden")
-
-        Text("testtttt jasonfdjasfkal")
+        ZStack {
+            Image("gardenEmpty")
+                .resizable()
+                .edgesIgnoringSafeArea(.all)
+            ProgressBarView()
+                .offset(y: -UIScreen.main.bounds.height * 0.4)
+        }
 
     }
 }

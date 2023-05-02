@@ -21,7 +21,7 @@ struct HistoryPageView: View {
                     Image(systemName: "chevron.left")
                         .resizable()
                         .frame(width: 14, height: 26)
-                        .padding(.leading, 40)
+                        .padding(.leading, 60)
                         .onTapGesture {
                             navigateToGardenPageView()
                         }
@@ -46,7 +46,7 @@ struct HistoryPageView: View {
                     Image("sunflower1")
                         .offset(x:-80)
                        
-                }.offset(y:-80).border(.red)
+                }.offset(y:-50)
                 
             }
         }.foregroundColor(Color("darkBrown"))
