@@ -27,7 +27,7 @@ struct HistoryPageView: View {
                         }
                     Spacer()
                         .frame(width: UIScreen.main.bounds.width * 0.25)
-                    Text("Lovar History")
+                    Text("Lovar History!")
                         .font(Font.custom("Chivo-Regular", size: 28))
                     Spacer()
                         .frame(width: UIScreen.main.bounds.width * 0.3)
