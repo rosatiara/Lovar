@@ -10,7 +10,7 @@ import Foundation
 struct Bingo: Hashable{
     
     var id: Int //(Primary Key)
-    var tileCondition: [[Bool]]
+    var tileCondition: [[Int]]
     var title: [[String]]
     var description: [[String]]
     var type: [[Int]]
@@ -20,7 +20,7 @@ struct Bingo: Hashable{
     var end_date: String
     
  
-    init(id: Int, tileCondition: [[Bool]], title: [[String]], description: [[String]], type: [[Int]], isCompleted: Bool, mood: String, start_date: String, end_date: String) {
+    init(id: Int, tileCondition: [[Int]], title: [[String]], description: [[String]], type: [[Int]], isCompleted: Bool, mood: String, start_date: String, end_date: String) {
         self.id = id
         self.tileCondition = tileCondition
         self.title = title
@@ -32,5 +32,10 @@ struct Bingo: Hashable{
         self.end_date = end_date
     }
 }
+
+let conditionFalse = Array(repeating: Array(repeating: 0, count: 4), count: 4)
+
+
+var bingoTest = Bingo(id: 0, tileCondition: conditionFalse, title: [["None"]], description: [["None"]], type: [[0]], isCompleted: false, mood: "None", start_date: "-", end_date: "-")
 
 

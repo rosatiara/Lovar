@@ -27,7 +27,7 @@ struct HistoryPageView: View {
                         }
                     Spacer()
                         .frame(width: UIScreen.main.bounds.width * 0.25)
-                    Text("Lovar History!")
+                    Text("Lovar History")
                         .font(Font.custom("Chivo-Regular", size: 28))
                     Spacer()
                         .frame(width: UIScreen.main.bounds.width * 0.3)
@@ -136,6 +136,25 @@ struct GardenPicture: View {
     
 }
 
+struct BingoPicture: View {
+    var body: some View {
+        VStack() {
+            ZStack {
+                //                Rectangle()
+                //                    .frame(width: 90, height: 146)
+                // masukkin variable garden picture di sini
+               
+                
+            }
+            Text("No History")
+                .foregroundColor(Color("darkBrown"))
+                .bold()
+        }
+        
+    }
+    
+}
+
 
 struct BingoHistory: View {
     var body: some View {
@@ -144,9 +163,18 @@ struct BingoHistory: View {
                 .frame(width: 330, height: 512)
                 .foregroundColor(Color("historyItemsBg"))
                 .overlay(RoundedRectangle(cornerRadius: 10).stroke(Color("darkBrown"), lineWidth: 2))
+            ScrollView() {
+                let columns = Array(repeating: GridItem(.flexible()), count: 2)
+                LazyVGrid(columns: columns) {
+                    BingoPicture()
+                }.padding(.top, 30).padding(.leading, 60)
+            }
         }
+        
     }
 }
+
+
 struct HistoryPageView_Previews: PreviewProvider {
     static var previews: some View {
         HistoryPageView()
