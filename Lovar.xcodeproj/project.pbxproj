@@ -28,7 +28,6 @@
 		3127B21129FFEC9300A2A07E /* Chivo in Resources */ = {isa = PBXBuildFile; fileRef = 3127B20F29FFEC9300A2A07E /* Chivo */; };
 		3127B21229FFEC9300A2A07E /* Oregano in Resources */ = {isa = PBXBuildFile; fileRef = 3127B21029FFEC9300A2A07E /* Oregano */; };
 		313E20FE29FA3CC600DD5B59 /* Untitled_Artwork 3.png in Resources */ = {isa = PBXBuildFile; fileRef = 313E20FD29FA3CC600DD5B59 /* Untitled_Artwork 3.png */; };
-		D9471B362A00B08B00558FB4 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9471B322A00B08B00558FB4 /* UIColor.swift */; };
 		D9471B402A00B34E00558FB4 /* PromptListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9471B3D2A00B34E00558FB4 /* PromptListModel.swift */; };
 		D9471B412A00B34E00558FB4 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9471B3E2A00B34E00558FB4 /* UserModel.swift */; };
 		D9471B422A00B34E00558FB4 /* BingoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9471B3F2A00B34E00558FB4 /* BingoModel.swift */; };
@@ -78,7 +77,6 @@
 		3127B21029FFEC9300A2A07E /* Oregano */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Oregano; sourceTree = "<group>"; };
 		313E20FD29FA3CC600DD5B59 /* Untitled_Artwork 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Untitled_Artwork 3.png"; sourceTree = "<group>"; };
 		313E20FF29FA41FA00DD5B59 /* Lovar.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Lovar.entitlements; sourceTree = "<group>"; };
-		D9471B322A00B08B00558FB4 /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIColor.swift; path = ../../../../Lovar/Lovar/Model/UIColor.swift; sourceTree = "<group>"; };
 		D9471B3D2A00B34E00558FB4 /* PromptListModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PromptListModel.swift; sourceTree = "<group>"; };
 		D9471B3E2A00B34E00558FB4 /* UserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		D9471B3F2A00B34E00558FB4 /* BingoModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BingoModel.swift; sourceTree = "<group>"; };
@@ -202,7 +200,6 @@
 		31045B5829FA12F900F2E9F1 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				D9471B322A00B08B00558FB4 /* UIColor.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -365,7 +362,6 @@
 				31045B5E29FA140D00F2E9F1 /* OpeningPageView.swift in Sources */,
 				31045B3329FA0D8200F2E9F1 /* Lovar.xcdatamodeld in Sources */,
 				31045B6B29FA14B700F2E9F1 /* BingoHistoryView.swift in Sources */,
-				D9471B362A00B08B00558FB4 /* UIColor.swift in Sources */,
 				31045B5C29FA13FF00F2E9F1 /* GardenPageView.swift in Sources */,
 				31045B6E29FA15B800F2E9F1 /* GardenItemView.swift in Sources */,
 				D9471B412A00B34E00558FB4 /* UserModel.swift in Sources */,

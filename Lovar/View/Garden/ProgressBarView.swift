@@ -12,7 +12,7 @@ struct ProgressBarView: View {
     @State private var levelTrust = 1
     @State private var levelCommunication = 1
     @State private var levelUnderstanding = 1
-    @State private var progressTrust = 3
+    @State private var progressTrust = 4
     @State private var progressCommunication = 1
     @State private var progressUnderstanding = 3
     @State private var requiredTrust = 4
@@ -26,20 +26,19 @@ struct ProgressBarView: View {
             HStack{
                 Circle()
                 .frame(width: 40)
-                .foregroundColor(colorLightPink)
+                .foregroundColor(Color("pink1"))
                 VStack(alignment: .leading, spacing: 3){
                     Text("Level \(levelTrust)").font(.system(size: 14, weight: .regular))
                     ZStack(alignment: .leading){
                         Rectangle()
                             .frame(width: progressWidth, height: 18)
-                            .foregroundColor(colorLightPink)
+                            .foregroundColor(Color("pink1"))
                             .cornerRadius(5)
-                        Image("exp2")
+                        Image("exp3")
                             .resizable()
-                            .scaledToFit()
                             .frame(width: getWidth(progress: progressTrust, required: requiredTrust), height: 18)
                             .cornerRadius(5)
-                            .foregroundColor(colorPink)
+                            .foregroundColor(Color("pink1"))
             
                         
                             
@@ -56,18 +55,18 @@ struct ProgressBarView: View {
             HStack{
                 Circle()
                 .frame(width: 40)
-                .foregroundColor(colorLightPink)
+                .foregroundColor(Color("pink1"))
                 VStack(alignment: .leading, spacing: 3){
                     Text("Level \(levelCommunication)").font(.system(size: 14, weight: .regular))
                     ZStack(alignment: .leading){
                         Rectangle()
                             .frame(width: progressWidth, height: 18)
-                            .foregroundColor(colorLightPink)
+                            .foregroundColor(Color("pink1"))
                             .cornerRadius(5)
                         Rectangle()
                             .frame(width: getWidth(progress: progressCommunication, required: requiredCommunication), height: 18)
                             .cornerRadius(5)
-                            .foregroundColor(colorPink)
+                            .foregroundColor(Color("pink1"))
                             
                             Text(" \(progressCommunication)/\(requiredCommunication)")
                                 .font(.system(size: 12, weight: .regular))
@@ -82,18 +81,18 @@ struct ProgressBarView: View {
             HStack{
                 Circle()
                 .frame(width: 40)
-                .foregroundColor(colorLightPink)
+                .foregroundColor(Color("pink1"))
                 VStack(alignment: .leading, spacing: 3){
                     Text("Level \(levelUnderstanding)").font(.system(size: 14, weight: .regular))
                     ZStack(alignment: .leading){
                         Rectangle()
                             .frame(width: progressWidth, height: 18)
-                            .foregroundColor(colorLightPink)
+                            .foregroundColor(Color("pink1"))
                             .cornerRadius(5)
                         Rectangle()
                             .frame(width: getWidth(progress: progressUnderstanding, required: requiredUnderstanding), height: 18)
                             .cornerRadius(5)
-                            .foregroundColor(colorPink)
+                            .foregroundColor(Color("pink1"))
                             
                             Text(" \(progressUnderstanding)/\(requiredUnderstanding)")
                                 .font(.system(size: 12, weight: .regular))
