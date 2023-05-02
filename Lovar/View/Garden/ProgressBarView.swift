@@ -31,13 +31,14 @@ struct ProgressBarView: View {
                     Text("Level \(levelTrust)").font(.system(size: 14, weight: .regular))
                     ZStack(alignment: .leading){
                         Rectangle()
+                            .border(.green)
                             .frame(width: progressWidth, height: 18)
                             .foregroundColor(Color("pink3"))
-                            .cornerRadius(5)
+                
                         Image("exp2")
                             .resizable()
                             .frame(width: getWidth(progress: progressTrust, required: requiredTrust), height: 18)
-                            .cornerRadius(5)
+                  
                             .foregroundColor(Color("pink1"))
             
                         
@@ -62,11 +63,10 @@ struct ProgressBarView: View {
                         Rectangle()
                             .frame(width: progressWidth, height: 18)
                             .foregroundColor(Color("pink3"))
-                            .cornerRadius(5)
+                   
                         Image("exp2")
                             .resizable()
                             .frame(width: getWidth(progress: progressCommunication, required: requiredCommunication), height: 18)
-                            .cornerRadius(5)
                             .foregroundColor(Color("pink1"))
                             
                             Text(" \(progressCommunication)/\(requiredCommunication)")
@@ -89,11 +89,11 @@ struct ProgressBarView: View {
                         Rectangle()
                             .frame(width: progressWidth, height: 18)
                             .foregroundColor(Color("pink3"))
-                            .cornerRadius(5)
+                           
                         Image("exp2")
                             .resizable()
                             .frame(width: getWidth(progress: progressUnderstanding, required: requiredUnderstanding), height: 18)
-                            .cornerRadius(5)
+                    
                             .foregroundColor(Color("pink1"))
                             
                             Text(" \(progressUnderstanding)/\(requiredUnderstanding)")
