@@ -22,6 +22,7 @@ struct GardenPageView: View {
                     .frame(width: 80, height: 30)
                     .onTapGesture {
                         navigateToHistoryPageView()
+                        
                     }
                 Rectangle() // Bingo Rock
                     .opacity(0.0001)

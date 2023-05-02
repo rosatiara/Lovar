@@ -18,8 +18,16 @@ struct BingoPageView: View {
         ZStack{
             Color("cream").edgesIgnoringSafeArea(.all)
             VStack {
+                HStack {
+                    Image(systemName: "chevron.left")
+                        .renderingMode(.template)
+                        .scaleEffect(2)
+                    Spacer().frame(width: UIScreen.main.bounds.width * 0.8)
+                }.foregroundColor(Color("purple"))
+                
                 Text("BINGO!")
-                    .font(Font.custom("Chivo-Regular", size: 28)).padding()
+                    .font(Font.custom("Oregano-Regular", size: 48)).padding()
+                    .foregroundColor(Color("pink1"))
                 
                 LazyVGrid(columns: Array(repeating: .init(.fixed(UIScreen.main.bounds.width * 0.2)), count: bingoRow), spacing: 10, content: {
                     ForEach(bingoCondition.indices, id: \.self) { rowIndex in
@@ -68,6 +76,29 @@ struct BingoPageView: View {
 //                        ItemDetailView(showDetailView: $showDetailView)
 //                    }
 //                }
+                HStack(spacing: -145) {
+                    Image("grassLeft")
+                    ZStack {
+                        Image("sunflower1")
+                            .offset(y:-50)
+                        Image("grassLeft")
+                    }
+                    Image("grassRight")
+                    Image("grassLeft")
+                    ZStack {
+                        Image("grassRight")
+                        Image("sunflower1")
+                            .offset(y:-30)
+                    }
+                    Image("grassLeft")
+                    Image("grassRight")
+                    ZStack {
+                        Image("sunflower1")
+                            .offset(y:-50)
+                        Image("grassLeft")
+                    }
+                    Image("grassRight")
+                }.offset(y: 105)
                 
             }.frame(width: UIScreen.main.bounds.width * 0.5)
             .onAppear {
