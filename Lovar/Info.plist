@@ -2,9 +2,14 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>UIBackgroundModes</key>
+	<key></key>
+	<string>$(MARKETING_VERSION)</string>
+	<key>UIAppFonts</key>
 	<array>
-		<string>remote-notification</string>
+		<string>Chivo/static/Chivo-Italic.ttf</string>
+		<string>Chivo/static/Chivo-Regular.ttf</string>
+		<string>Oregano/Oregano-Italic.ttf</string>
+		<string>Oregano/Oregano-Regular.ttf</string>
 	</array>
 </dict>
 </plist>
