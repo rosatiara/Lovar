@@ -12,60 +12,66 @@ struct ProgressBarView: View {
     @State private var levelTrust = 1
     @State private var levelCommunication = 1
     @State private var levelUnderstanding = 1
-    @State private var progressTrust = 4
+    @State private var progressTrust = 2
     @State private var progressCommunication = 1
     @State private var progressUnderstanding = 3
     @State private var requiredTrust = 4
     @State private var requiredCommunication = 4
     @State private var requiredUnderstanding = 4
     
-    @State private var progressWidth = CGFloat(70)
+    @State private var progressWidth = CGFloat(65)
     var body: some View {
         HStack{
             //Trust - 0
-            HStack{
-                Circle()
-                .frame(width: 40)
-                .foregroundColor(Color("pink1"))
+            HStack(spacing: -5){
+                Image("ExpTree")
+                    .resizable()
+                    .frame(width: 60, height: 60)
                 VStack(alignment: .leading, spacing: 3){
                     Text("Level \(levelTrust)").font(.system(size: 14, weight: .regular))
                     ZStack(alignment: .leading){
+                        
+                        
                         Rectangle()
+                            .border(.green)
                             .frame(width: progressWidth, height: 18)
-                            .foregroundColor(Color("pink1"))
-                            .cornerRadius(5)
-                        Image("exp3")
-                            .resizable()
-                            .frame(width: getWidth(progress: progressTrust, required: requiredTrust), height: 18)
-                            .cornerRadius(5)
-                            .foregroundColor(Color("pink1"))
-            
+                            .foregroundColor(Color("yellow"))
                         
+                        HStack{
+                            Image("exp2")
+                                .resizable()
+                                .frame(width: getWidth(progress: progressTrust, required: requiredTrust), height: 18)
                             
-                            Text(" \(progressTrust)/\(requiredTrust)")
+                                .foregroundColor(Color("pink1"))
+                            
+                            
+                            
+                            Text("\(progressTrust)/\(requiredTrust)")
                                 .font(.system(size: 12, weight: .regular))
-                        
-                        
+                            
+                            
+                        }
                     }
                 
                 }
             }
             
             //Communication - 1
-            HStack{
-                Circle()
-                .frame(width: 40)
-                .foregroundColor(Color("pink1"))
+            HStack(spacing: -5){
+                Image("ExpFlower")
+                    .resizable()
+                    .frame(width: 60, height: 60)
                 VStack(alignment: .leading, spacing: 3){
                     Text("Level \(levelCommunication)").font(.system(size: 14, weight: .regular))
                     ZStack(alignment: .leading){
                         Rectangle()
+                            .border(.green)
                             .frame(width: progressWidth, height: 18)
-                            .foregroundColor(Color("pink1"))
-                            .cornerRadius(5)
-                        Rectangle()
+                            .foregroundColor(Color("yellow"))
+                   
+                        Image("exp2")
+                            .resizable()
                             .frame(width: getWidth(progress: progressCommunication, required: requiredCommunication), height: 18)
-                            .cornerRadius(5)
                             .foregroundColor(Color("pink1"))
                             
                             Text(" \(progressCommunication)/\(requiredCommunication)")
@@ -78,20 +84,22 @@ struct ProgressBarView: View {
             }
             
             //Understanding - 2
-            HStack{
-                Circle()
-                .frame(width: 40)
-                .foregroundColor(Color("pink1"))
+            HStack(spacing: -5){
+                Image("ExpButterfly")
+                    .resizable()
+                    .frame(width: 60, height: 60)
                 VStack(alignment: .leading, spacing: 3){
                     Text("Level \(levelUnderstanding)").font(.system(size: 14, weight: .regular))
                     ZStack(alignment: .leading){
                         Rectangle()
+                            .border(.green)
                             .frame(width: progressWidth, height: 18)
-                            .foregroundColor(Color("pink1"))
-                            .cornerRadius(5)
-                        Rectangle()
+                            .foregroundColor(Color("yellow"))
+                           
+                        Image("exp2")
+                            .resizable()
                             .frame(width: getWidth(progress: progressUnderstanding, required: requiredUnderstanding), height: 18)
-                            .cornerRadius(5)
+                    
                             .foregroundColor(Color("pink1"))
                             
                             Text(" \(progressUnderstanding)/\(requiredUnderstanding)")

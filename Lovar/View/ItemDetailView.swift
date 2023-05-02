@@ -10,6 +10,9 @@ import SwiftUI
 struct ItemDetailView: View {
     // let fact: Fact
     @Binding var showDetailView: Bool
+    @Binding var columnIndex: Int
+    @Binding var rowIndex: Int
+    @Binding var bingoCondition: [[Int]]
     
     var body: some View {
         ZStack {
@@ -47,12 +50,15 @@ struct ItemDetailView: View {
                     .padding(.bottom, 20)
                     .padding(20)
                 Button {
-                    
+                    showDetailView = false
+                    bingoCondition[rowIndex][columnIndex] = 1
+                    bingoTest.tileCondition = bingoCondition
+                    detectBingo()
                 } label : {
                     ZStack {
                         RoundedRectangle(cornerRadius: 10)
-                            .frame(width: 80, height: 40)
-                        Text("OK")
+                            .frame(width: 120, height: 40)
+                        Text("Complete")
                             .bold()
                             .foregroundColor(.white)
                     }
@@ -64,6 +70,42 @@ struct ItemDetailView: View {
         .cornerRadius(15)
         .shadow(radius: 5)
         .foregroundColor(.pink)
+    }
+    
+    func detectBingo(){
+    //Horizontal
+        for i in 0..<4{
+            var bingoTemp = bingoCondition
+            var rowBingo = true
+            for j in 0..<4{
+                if bingoCondition[i][j] == 1 || bingoCondition[j][i] == 2{
+                    bingoTemp[i][j] = 2
+                }else{
+                    rowBingo = false
+                    break
+                }
+            }
+            if rowBingo{
+                bingoCondition = bingoTemp
+            }
+        }
+        //Vertical
+        for i in 0..<4{
+            var bingoTemp = bingoCondition
+            var rowBingo = true
+            for j in 0..<4{
+                if bingoCondition[j][i] == 1 || bingoCondition[j][i] == 2{
+                    bingoTemp[j][i] = 2
+                }else{
+                    rowBingo = false
+                    break
+                }
+            }
+            if rowBingo{
+                bingoCondition = bingoTemp
+            }
+        }
+
     }
 }
 
