@@ -105,6 +105,22 @@ struct ItemDetailView: View {
                 bingoCondition = bingoTemp
             }
         }
+        
+        //Diagonal
+        
+        if (bingoCondition[0][0] == 1 || bingoCondition[0][0] == 2) && (bingoCondition[1][1] == 1 || bingoCondition[1][1] == 2) && (bingoCondition[2][2] == 1 || bingoCondition[2][2] == 2) && (bingoCondition[3][3] == 1 || bingoCondition[3][3] == 2){
+            bingoCondition[0][0] = 2
+            bingoCondition[1][1] = 2
+            bingoCondition[2][2] = 2
+            bingoCondition[3][3] = 2
+        }
+        
+        if (bingoCondition[0][3] == 1 || bingoCondition[0][3] == 2) && (bingoCondition[1][2] == 1 || bingoCondition[1][2] == 2) && (bingoCondition[2][1] == 1 || bingoCondition[2][1] == 2) && (bingoCondition[3][0] == 1 || bingoCondition[3][0] == 2){
+            bingoCondition[0][3] = 2
+            bingoCondition[1][2] = 2
+            bingoCondition[2][1] = 2
+            bingoCondition[3][0] = 2
+        }
 
     }
 }

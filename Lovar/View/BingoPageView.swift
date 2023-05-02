@@ -26,12 +26,12 @@ struct BingoPageView: View {
                 Text("BINGO!")
                     .font(Font.custom("Chivo-Regular", size: 28)).padding()
                 
-                LazyVGrid(columns: Array(repeating: .init(.fixed(80)), count: bingoRow), spacing: 10, content: {
+                LazyVGrid(columns: Array(repeating: .init(.fixed(UIScreen.main.bounds.width * 0.2)), count: bingoRow), spacing: 10, content: {
                     ForEach(bingoCondition.indices, id: \.self) { rowIndex in
                         ForEach(bingoCondition[rowIndex].indices, id: \.self) { columnIndex in
                             if bingoCondition[rowIndex][columnIndex] == 0{
                                 Rectangle()
-                                    .frame(width: 70, height: 70)
+                                    .frame(width: UIScreen.main.bounds.width * 0.2, height: UIScreen.main.bounds.width * 0.2)
                                     .cornerRadius(6)
                                     .foregroundStyle(
                                         Color("pink1").gradient.shadow(.inner(color: .black.opacity(0.5), radius: 4, x: -2, y: -2))
@@ -45,7 +45,7 @@ struct BingoPageView: View {
                             } else if bingoCondition[rowIndex][columnIndex] == 1{
                                 
                                 Rectangle()
-                                    .frame(width: 70, height: 70)
+                                    .frame(width: UIScreen.main.bounds.width * 0.2, height: UIScreen.main.bounds.width * 0.2)
                                     .cornerRadius(6)
                                     .foregroundStyle(
                                         .blue.gradient.shadow(.inner(color: .black.opacity(0.5), radius: 4, x: -2, y: -2))
@@ -54,7 +54,7 @@ struct BingoPageView: View {
                             }
                             else{
                                 Rectangle()
-                                    .frame(width: 70, height: 70)
+                                    .frame(width: UIScreen.main.bounds.width * 0.2, height: UIScreen.main.bounds.width * 0.2)
                                     .cornerRadius(6)
                                     .foregroundStyle(
                                         .yellow.gradient.shadow(.inner(color: .black.opacity(0.5), radius: 4, x: -2, y: -2))
@@ -74,7 +74,7 @@ struct BingoPageView: View {
 //                    }
 //                }
                 
-            }
+            }.border(.red).frame(width: UIScreen.main.bounds.width * 0.5)
             .onAppear {
                 bingoCondition = bingoTest.tileCondition
             }
