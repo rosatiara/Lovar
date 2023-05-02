@@ -25,6 +25,9 @@
 		31045B6E29FA15B800F2E9F1 /* GardenItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31045B6D29FA15B800F2E9F1 /* GardenItemView.swift */; };
 		31045B7029FA15C500F2E9F1 /* ProgressBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31045B6F29FA15C500F2E9F1 /* ProgressBarView.swift */; };
 		313E20FE29FA3CC600DD5B59 /* Untitled_Artwork 3.png in Resources */ = {isa = PBXBuildFile; fileRef = 313E20FD29FA3CC600DD5B59 /* Untitled_Artwork 3.png */; };
+		D957CF3C29FB87D80097D337 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D957CF3B29FB87D80097D337 /* UserModel.swift */; };
+		D957CF3E29FB8AC70097D337 /* BingoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D957CF3D29FB8AC70097D337 /* BingoModel.swift */; };
+		D957CF4029FB8D4B0097D337 /* PromptListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D957CF3F29FB8D4B0097D337 /* PromptListModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +71,9 @@
 		31045B6F29FA15C500F2E9F1 /* ProgressBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBarView.swift; sourceTree = "<group>"; };
 		313E20FD29FA3CC600DD5B59 /* Untitled_Artwork 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Untitled_Artwork 3.png"; sourceTree = "<group>"; };
 		313E20FF29FA41FA00DD5B59 /* Lovar.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Lovar.entitlements; sourceTree = "<group>"; };
+		D957CF3B29FB87D80097D337 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UserModel.swift; path = Lovar/UserModel.swift; sourceTree = SOURCE_ROOT; };
+		D957CF3D29FB8AC70097D337 /* BingoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BingoModel.swift; path = Lovar/BingoModel.swift; sourceTree = SOURCE_ROOT; };
+		D957CF3F29FB8D4B0097D337 /* PromptListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PromptListModel.swift; path = Lovar/PromptListModel.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +168,9 @@
 		31045B5629FA12C100F2E9F1 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				D957CF3B29FB87D80097D337 /* UserModel.swift */,
+				D957CF3D29FB8AC70097D337 /* BingoModel.swift */,
+				D957CF3F29FB8D4B0097D337 /* PromptListModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -336,10 +345,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				31045B3029FA0D8200F2E9F1 /* Persistence.swift in Sources */,
+				D957CF4029FB8D4B0097D337 /* PromptListModel.swift in Sources */,
 				31045B7029FA15C500F2E9F1 /* ProgressBarView.swift in Sources */,
 				31045B2929FA0D8100F2E9F1 /* ContentView.swift in Sources */,
 				31045B5E29FA140D00F2E9F1 /* OpeningPageView.swift in Sources */,
 				31045B3329FA0D8200F2E9F1 /* Lovar.xcdatamodeld in Sources */,
+				D957CF3C29FB87D80097D337 /* UserModel.swift in Sources */,
 				31045B6B29FA14B700F2E9F1 /* BingoHistoryView.swift in Sources */,
 				31045B5C29FA13FF00F2E9F1 /* GardenPageView.swift in Sources */,
 				31045B6E29FA15B800F2E9F1 /* GardenItemView.swift in Sources */,
@@ -347,6 +358,7 @@
 				31045B6329FA145B00F2E9F1 /* BingoPageView.swift in Sources */,
 				31045B6129FA144800F2E9F1 /* HistoryPageView.swift in Sources */,
 				31045B2729FA0D8100F2E9F1 /* LovarApp.swift in Sources */,
+				D957CF3E29FB8AC70097D337 /* BingoModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

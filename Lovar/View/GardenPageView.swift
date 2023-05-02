@@ -9,7 +9,11 @@ import SwiftUI
 
 struct GardenPageView: View {
     var body: some View {
+
+        Text("Garden")
+
         Text("testtttt jasonfdjasfkal")
+
     }
 }
 
