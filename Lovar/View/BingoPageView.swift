@@ -23,7 +23,7 @@ struct BingoPageView: View {
                         .renderingMode(.template)
                         .scaleEffect(2)
                     Spacer().frame(width: UIScreen.main.bounds.width * 0.8)
-                }.foregroundColor(Color("purple"))
+                }.foregroundColor(Color("darkBrown"))
                 
                 Text("BINGO!")
                     .font(Font.custom("Oregano-Regular", size: 48)).padding()
@@ -123,6 +123,7 @@ struct BingoPageView: View {
 //        }
 //        //bingoCondition[0][0] = true
 //    }
+    
 }
 
 struct BingoDetail: View{
