@@ -21,19 +21,11 @@ struct BingoPageView: View {
             ZStack{
                 Color("cream").edgesIgnoringSafeArea(.all)
                 VStack {
-                    HStack {
-                        Image(systemName: "chevron.left")
-                            .renderingMode(.template)
-                            .scaleEffect(2)
-                            .onTapGesture {
-                                showBingo = false
-                            }
-                        Spacer().frame(width: UIScreen.main.bounds.width * 0.8)
-                    }.foregroundColor(Color("darkBrown"))
-                    
-                    Text("BINGO!")
+                    Spacer()
+                        .frame(height: UIScreen.main.bounds.height * 0.1)
+                    Text("LOVE!")
                         .font(Font.custom("Oregano-Regular", size: 48)).padding()
-                        .foregroundColor(Color("pink1"))
+                        .foregroundColor(Color("darkBrown"))
                     
                     LazyVGrid(columns: Array(repeating: .init(.fixed(UIScreen.main.bounds.width * 0.2)), count: bingoRow), spacing: 10, content: {
                         ForEach(bingoBoard.tileCondition.indices, id: \.self) { rowIndex in
@@ -110,38 +102,35 @@ struct BingoPageView: View {
                             }
                         }
                     })
-                    
-                    //                ZStack {
-                    //                    Button("Show detail view") {
-                    //                        showDetailView = true
-                    //                    }
-                    //                    if showDetailView {
-                    //                        ItemDetailView(showDetailView: $showDetailView)
-                    //                    }
-                    //                }
-                    HStack(spacing: -145) {
-                        Image("grassLeft")
-                        ZStack {
-                            Image("sunflower1")
-                                .offset(y:-50)
-                            Image("grassLeft")
+                    Image("backToGarden")
+                        .scaleEffect(0.6)
+                        .offset(y: 10)
+                        .onTapGesture {
+                            navigateToGardenPageView()
                         }
-                        Image("grassRight")
-                        Image("grassLeft")
-                        ZStack {
-                            Image("grassRight")
-                            Image("sunflower1")
-                                .offset(y:-30)
+                    HStack(spacing: -160) {
+                        HStack(spacing: -145) {
+                            Image("babyBreathPink")
+                                .scaleEffect(1.75)
+                            Image("babyBreathYellow")
                         }
-                        Image("grassLeft")
-                        Image("grassRight")
-                        ZStack {
-                            Image("sunflower1")
-                                .offset(y:-50)
-                            Image("grassLeft")
+                        HStack(spacing: -150) {
+                            Image("babyBreathPink")
+                                .offset(y: -40)
+                            Image("babyBreathYellow")
+                                .offset(y: 0)
+                            Image("babyBreathPink")
+                                .offset(y: -30)
+                            Image("babyBreathYellow")
+                        }.offset(y: 50)
+                        HStack(spacing: -145) {
+                            Image("babyBreathYellow")
+                                .offset(y: -10)
+                                .scaleEffect(1.25)
+                            Image("babyBreathPink")
+                                .scaleEffect(1.75)
                         }
-                        Image("grassRight")
-                    }.offset(y: 105)
+                    }
                     
                 }.frame(width: UIScreen.main.bounds.width * 0.5)
                     .onAppear {
@@ -169,16 +158,22 @@ struct BingoPageView: View {
         }
     }
     
+    func navigateToGardenPageView() {
+        let gardenPageView = GardenPageView()
+        UIApplication.shared.windows.first?.rootViewController = UIHostingController(rootView: gardenPageView)
+        UIApplication.shared.windows.first?.makeKeyAndVisible()
+    }
     
-//
-//    func initializeBingoItems(){
-//        for i in 0..<4{
-//            for j in 0..<4{
-//                bingoCondition[i][j] = false
-//            }
-//        }
-//        //bingoCondition[0][0] = true
-//    }
+    
+    //
+    //    func initializeBingoItems(){
+    //        for i in 0..<4{
+    //            for j in 0..<4{
+    //                bingoCondition[i][j] = false
+    //            }
+    //        }
+    //        //bingoCondition[0][0] = true
+    //    }
     
 }
 

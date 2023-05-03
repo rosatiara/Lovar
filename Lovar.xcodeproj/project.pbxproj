@@ -28,8 +28,8 @@
 		313E20FE29FA3CC600DD5B59 /* Untitled_Artwork 3.png in Resources */ = {isa = PBXBuildFile; fileRef = 313E20FD29FA3CC600DD5B59 /* Untitled_Artwork 3.png */; };
 		316047C52A00BABF00A978E9 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 316047C42A00BABF00A978E9 /* .gitignore */; };
 		316048132A01423D00A978E9 /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 316048122A01423D00A978E9 /* SpriteKit.framework */; };
-		316048172A01437400A978E9 /* ButterflyScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 316048162A01437400A978E9 /* ButterflyScene.swift */; };
 		3160481A2A01487E00A978E9 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 316048192A01487E00A978E9 /* Contact.swift */; };
+		3160485C2A020D2A00A978E9 /* CongratulationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3160485B2A020D2A00A978E9 /* CongratulationsView.swift */; };
 		D9471B402A00B34E00558FB4 /* PromptListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9471B3D2A00B34E00558FB4 /* PromptListModel.swift */; };
 		D9471B412A00B34E00558FB4 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9471B3E2A00B34E00558FB4 /* UserModel.swift */; };
 		D9471B422A00B34E00558FB4 /* BingoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9471B3F2A00B34E00558FB4 /* BingoModel.swift */; };
@@ -79,8 +79,8 @@
 		313E20FF29FA41FA00DD5B59 /* Lovar.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Lovar.entitlements; sourceTree = "<group>"; };
 		316047C42A00BABF00A978E9 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		316048122A01423D00A978E9 /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = System/Library/Frameworks/SpriteKit.framework; sourceTree = SDKROOT; };
-		316048162A01437400A978E9 /* ButterflyScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButterflyScene.swift; sourceTree = "<group>"; };
 		316048192A01487E00A978E9 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
+		3160485B2A020D2A00A978E9 /* CongratulationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CongratulationsView.swift; sourceTree = "<group>"; };
 		D9471B3D2A00B34E00558FB4 /* PromptListModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PromptListModel.swift; sourceTree = "<group>"; };
 		D9471B3E2A00B34E00558FB4 /* UserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		D9471B3F2A00B34E00558FB4 /* BingoModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BingoModel.swift; sourceTree = "<group>"; };
@@ -137,7 +137,6 @@
 			isa = PBXGroup;
 			children = (
 				316048182A01486B00A978E9 /* iCloud */,
-				316048162A01437400A978E9 /* ButterflyScene.swift */,
 				3127B20F29FFEC9300A2A07E /* Chivo */,
 				3127B21029FFEC9300A2A07E /* Oregano */,
 				313E20FF29FA41FA00DD5B59 /* Lovar.entitlements */,
@@ -201,6 +200,7 @@
 				31045B6029FA144800F2E9F1 /* HistoryPageView.swift */,
 				31045B6229FA145B00F2E9F1 /* BingoPageView.swift */,
 				31257C4129FB8E3A00467D6C /* ItemDetailView.swift */,
+				3160485B2A020D2A00A978E9 /* CongratulationsView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -379,7 +379,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				316048172A01437400A978E9 /* ButterflyScene.swift in Sources */,
 				31045B3029FA0D8200F2E9F1 /* Persistence.swift in Sources */,
 				D9471B402A00B34E00558FB4 /* PromptListModel.swift in Sources */,
 				31045B7029FA15C500F2E9F1 /* ProgressBarView.swift in Sources */,
@@ -391,6 +390,7 @@
 				31045B6E29FA15B800F2E9F1 /* GardenItemView.swift in Sources */,
 				D9471B412A00B34E00558FB4 /* UserModel.swift in Sources */,
 				31045B6329FA145B00F2E9F1 /* BingoPageView.swift in Sources */,
+				3160485C2A020D2A00A978E9 /* CongratulationsView.swift in Sources */,
 				31257C4229FB8E3A00467D6C /* ItemDetailView.swift in Sources */,
 				D9471B422A00B34E00558FB4 /* BingoModel.swift in Sources */,
 				31045B6129FA144800F2E9F1 /* HistoryPageView.swift in Sources */,
