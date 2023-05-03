@@ -145,7 +145,7 @@ struct BingoPageView: View {
                     
                 }.frame(width: UIScreen.main.bounds.width * 0.5)
                     .onAppear {
-                        
+                        bingoBoard = bingoTest
                     }
                 
                 if(showDetailView){
