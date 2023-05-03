@@ -49,7 +49,7 @@ struct BingoPageView: View {
                                             .frame(width: UIScreen.main.bounds.width * 0.2, height: UIScreen.main.bounds.width * 0.2)
                                             .cornerRadius(6)
                                             .foregroundStyle(
-                                                .blue.gradient.shadow(.inner(color: .black.opacity(0.5), radius: 4, x: -2, y: -2))
+                                                Color("purple").gradient.shadow(.inner(color: .black.opacity(0.5), radius: 4, x: -2, y: -2))
                                             )
                                             .padding(4)
                                         

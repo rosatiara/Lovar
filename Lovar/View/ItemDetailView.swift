@@ -18,7 +18,7 @@ struct ItemDetailView: View {
     var body: some View {
         ZStack {
             Rectangle()
-                .foregroundColor(.white)
+                .foregroundColor(Color("cream")).opacity(0.3)
                 .frame(height: UIScreen.main.bounds.height * 0.65)
                 .cornerRadius(10)
                 .padding()
@@ -27,7 +27,7 @@ struct ItemDetailView: View {
                     Text("\(bingoBoard.title[rowIndex][columnIndex])")
                         .font(.system(size: 28))
                         .bold()
-                        .foregroundColor(.pink)
+                        .foregroundColor(Color("darkBrown"))
                         .padding(.leading, 70)
                         .frame(width: 250)
                     
@@ -45,7 +45,7 @@ struct ItemDetailView: View {
                 .padding(.trailing, 40)
                 Text("\(bingoBoard.description[rowIndex][columnIndex])")
                     .font(.system(size: 17))
-                    .foregroundColor(.pink)
+                    .foregroundColor(Color("darkBrown"))
                     .frame(maxWidth: UIScreen.main.bounds.width * 0.7)
                     .multilineTextAlignment(.center)
                     .padding(.bottom, 20)
@@ -78,7 +78,7 @@ struct ItemDetailView: View {
         .background(BlurView(style: .systemUltraThinMaterial))
         .cornerRadius(15)
         .shadow(radius: 5)
-        .foregroundColor(.pink)
+        .foregroundColor(Color("darkBrown"))
     }
     
     func detectBingo(){
