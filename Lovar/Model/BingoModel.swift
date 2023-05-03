@@ -34,8 +34,11 @@ struct Bingo: Hashable{
 }
 
 let conditionFalse = Array(repeating: Array(repeating: 0, count: 4), count: 4)
+let typeZero = Array(repeating: Array(repeating: 0, count: 4), count: 4)
+let titleFill = Array(repeating: Array(repeating: prompts[0].title, count: 4), count: 4)
+let descriptionFill = Array(repeating: Array(repeating: prompts[0].description, count: 4), count: 4)
 
 
-var bingoTest = Bingo(id: 0, tileCondition: conditionFalse, title: [["None"]], description: [["None"]], type: [[0]], isCompleted: false, mood: "None", start_date: "-", end_date: "-")
+var bingoTest = Bingo(id: 0, tileCondition: conditionFalse, title: titleFill, description: descriptionFill, type: typeZero, isCompleted: false, mood: "None", start_date: "-", end_date: "-")
 
 

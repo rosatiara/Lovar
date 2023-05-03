@@ -40,6 +40,6 @@ struct User: Hashable{
     }
 }
 
-let testUser = User(id: 0, name: "Chris", patnerId: 1, levelCommunication: 1, levelTrust: 1, levelUnderstanding: 1, progressCommunication: 0, progressTrust: 0, progressUnderstanding: 0, requiredProgressCommunication: 5, requiredProgressTrust: 5, requiredProgressUnderstanding: 5, bingoHistory: [0])
+var testUser = User(id: 0, name: "Chris", patnerId: 1, levelCommunication: 1, levelTrust: 1, levelUnderstanding: 1, progressCommunication: 1, progressTrust: 2, progressUnderstanding: 0, requiredProgressCommunication: 4, requiredProgressTrust: 4, requiredProgressUnderstanding: 4, bingoHistory: [0])
 
-let testUserPartner = User(id: 1, name: "Riley", patnerId: 0, levelCommunication: 1, levelTrust: 1, levelUnderstanding: 1, progressCommunication: 0, progressTrust: 0, progressUnderstanding: 0, requiredProgressCommunication: 5, requiredProgressTrust: 5, requiredProgressUnderstanding: 5, bingoHistory: [0])
+var testUserPartner = User(id: 1, name: "Riley", patnerId: 0, levelCommunication: 1, levelTrust: 1, levelUnderstanding: 1, progressCommunication: 0, progressTrust: 0, progressUnderstanding: 0, requiredProgressCommunication: 4, requiredProgressTrust: 4, requiredProgressUnderstanding: 4, bingoHistory: [0])

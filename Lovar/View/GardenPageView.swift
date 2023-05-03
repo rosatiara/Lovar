@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct GardenPageView: View {
+    @State private var userInfo = testUser
     var body: some View {
 
         ZStack {
@@ -33,13 +34,13 @@ struct GardenPageView: View {
                     }
             }
                 
-            ProgressBarView()
+            ProgressBarView(userInfo: $userInfo)
                 .offset(y: -UIScreen.main.bounds.height * 0.4)
         }
 
     }
     func navigateToBingoPageView() {
-        let bingoPageView = BingoPageView()
+        let bingoPageView = BingoPageView(userInfo: $userInfo)
         UIApplication.shared.windows.first?.rootViewController = UIHostingController(rootView: bingoPageView)
         UIApplication.shared.windows.first?.makeKeyAndVisible()
     }
