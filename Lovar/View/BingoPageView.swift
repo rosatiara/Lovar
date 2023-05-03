@@ -43,7 +43,7 @@ struct BingoPageView: View {
                                             selectedColumnIndex = columnIndex
                                             showDetailView = true
                                         }
-                                } else if bingoBoard.tileCondition[rowIndex][columnIndex] == 1{
+                                } else if bingoBoard.tileCondition[rowIndex][columnIndex] == 1 {
                                     ZStack{
                                         Rectangle()
                                             .frame(width: UIScreen.main.bounds.width * 0.2, height: UIScreen.main.bounds.width * 0.2)
@@ -52,30 +52,24 @@ struct BingoPageView: View {
                                                 Color("purple").gradient.shadow(.inner(color: .black.opacity(0.5), radius: 4, x: -2, y: -2))
                                             )
                                             .padding(4)
-                                        
-                                        
-                                        //                                        Image("Tree_Stamp")
-                                        //                                            .resizable()
-                                        //                                            .frame(width: 50, height: 50)
-                                        //
                                     }.overlay{
-                                        if bingoBoard.type[rowIndex][columnIndex] == 0{
+                                        if bingoBoard.type[rowIndex][columnIndex] == 0 {
                                             Image("Tree_Stamp")
                                                 .resizable()
                                                 .frame(width: 50, height: 50)
-                                        }else if bingoBoard.type[rowIndex][columnIndex] == 1{
+                                        } else if bingoBoard.type[rowIndex][columnIndex] == 1 {
                                             Image("Butterfly_Stamp")
                                                 .resizable()
                                                 .frame(width: 50, height: 50)
-                                        }else{
+                                        } else {
                                             Image("Flower_Stamp")
                                                 .resizable()
                                                 .frame(width: 50, height: 50)
                                         }
                                     }
                                 }
-                                else{
-                                    ZStack{
+                                else {
+                                    ZStack {
                                         Rectangle()
                                             .frame(width: UIScreen.main.bounds.width * 0.2, height: UIScreen.main.bounds.width * 0.2)
                                             .cornerRadius(6)
@@ -83,7 +77,7 @@ struct BingoPageView: View {
                                                 .yellow.gradient.shadow(.inner(color: .black.opacity(0.5), radius: 4, x: -2, y: -2))
                                             )
                                             .padding(4)
-                                    }.overlay{
+                                    }.overlay {
                                         if bingoBoard.type[rowIndex][columnIndex] == 0{
                                             Image("Tree_Stamp")
                                                 .resizable()
@@ -136,15 +130,13 @@ struct BingoPageView: View {
                     .onAppear {
                         
                     }
-                
-                if(showDetailView){
+                if(showDetailView) {
                     ItemDetailView(showDetailView: $showDetailView, columnIndex: $selectedColumnIndex, rowIndex: $selectedRowIndex, bingoBoard: $bingoBoard, userInfo: $userInfo)
                 }
                 
-                // ------------ //
                 
             }
-        }else{
+        } else {
             GardenPageView()
         }
     }
@@ -154,17 +146,6 @@ struct BingoPageView: View {
         UIApplication.shared.windows.first?.rootViewController = UIHostingController(rootView: gardenPageView)
         UIApplication.shared.windows.first?.makeKeyAndVisible()
     }
-    
-    
-    //
-    //    func initializeBingoItems(){
-    //        for i in 0..<4{
-    //            for j in 0..<4{
-    //                bingoCondition[i][j] = false
-    //            }
-    //        }
-    //        //bingoCondition[0][0] = true
-    //    }
     
 }
 
