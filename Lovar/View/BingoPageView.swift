@@ -20,8 +20,8 @@ struct BingoPageView: View {
             VStack {
                 Spacer().frame(height: UIScreen.main.bounds.height * 0.2)
                 Text("BINGO!")
-                    .font(Font.custom("Oregano-Regular", size: 48)).padding()
                     .foregroundColor(Color("darkBrown"))
+                    .font(Font.custom("Oregano-Regular", size: 48))
                 
                 LazyVGrid(columns: Array(repeating: .init(.fixed(UIScreen.main.bounds.width * 0.2)), count: bingoRow), spacing: 10, content: {
                     ForEach(bingoCondition.indices, id: \.self) { rowIndex in
