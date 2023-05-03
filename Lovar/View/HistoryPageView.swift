@@ -17,36 +17,22 @@ struct HistoryPageView: View {
             VStack {
                 Spacer()
                     .frame(height: UIScreen.main.bounds.height*0.15)
-                HStack {
-                    Image(systemName: "chevron.left")
-                        .resizable()
-                        .frame(width: 14, height: 26)
-                        .padding(.leading, 40)
+                    Text("Lovar History")
+                        .font(Font.custom("Oregano-Regular", size: 40))
+                VStack {
+                    TopBar(selected: self.$selected).offset(y:32)
+                    if self.selected == 0 {
+                        GardenHistory()
+                    } else {
+                        BingoHistory()
+                    }
+                }.offset(y: -30)
+                    Image("backToGarden")
+                        .scaleEffect(0.75)
+                        .offset(x: 90, y: -70)
                         .onTapGesture {
                             navigateToGardenPageView()
                         }
-                    Spacer()
-                        .frame(width: UIScreen.main.bounds.width * 0.25)
-                    Text("Lovar History!")
-                        .font(Font.custom("Chivo-Regular", size: 28))
-                    Spacer()
-                        .frame(width: UIScreen.main.bounds.width * 0.3)
-                }
-                TopBar(selected: self.$selected).offset(y:32)
-                if self.selected == 0 {
-                    GardenHistory()
-                } else {
-                    BingoHistory()
-                }
-                HStack() {
-                    Image("sunflower1")
-                        .offset(x:80)
-                    Image("sunflower1")
-                        .offset(x:0)
-                    Image("sunflower1")
-                        .offset(x:-80)
-                       
-                }.offset(y:-80).border(.red)
                 
             }
         }.foregroundColor(Color("darkBrown"))
@@ -91,7 +77,7 @@ struct TopBar: View {
                 }
             }.overlay(RoundedRectangle(cornerRadius: 10).stroke(Color("darkBrown"), lineWidth: 2))
             
-        }.offset(y:10)
+        }.offset(y:-5)
         
     }
     
@@ -108,7 +94,7 @@ struct GardenHistory: View {
                 let columns = Array(repeating: GridItem(.flexible()), count: 2)
                 LazyVGrid(columns: columns) {
                     GardenPicture()
-                }.padding(.top, 30).padding(.leading, 60)
+                }.padding(.top, 20)
             }
         }
         
@@ -136,6 +122,25 @@ struct GardenPicture: View {
     
 }
 
+struct BingoPicture: View {
+    var body: some View {
+        VStack() {
+            ZStack {
+                //                Rectangle()
+                //                    .frame(width: 90, height: 146)
+                // masukkin variable garden picture di sini
+               
+                
+            }
+            Text("No History")
+                .foregroundColor(Color("darkBrown"))
+                .bold()
+        }
+        
+    }
+    
+}
+
 
 struct BingoHistory: View {
     var body: some View {
@@ -144,9 +149,18 @@ struct BingoHistory: View {
                 .frame(width: 330, height: 512)
                 .foregroundColor(Color("historyItemsBg"))
                 .overlay(RoundedRectangle(cornerRadius: 10).stroke(Color("darkBrown"), lineWidth: 2))
+            ScrollView() {
+                let columns = Array(repeating: GridItem(.flexible()), count: 2)
+                LazyVGrid(columns: columns) {
+                    BingoPicture()
+                }.padding(.top, 30).padding(.leading, 60)
+            }
         }
+        
     }
 }
+
+
 struct HistoryPageView_Previews: PreviewProvider {
     static var previews: some View {
         HistoryPageView()

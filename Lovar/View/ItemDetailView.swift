@@ -10,6 +10,10 @@ import SwiftUI
 struct ItemDetailView: View {
     // let fact: Fact
     @Binding var showDetailView: Bool
+    @Binding var columnIndex: Int
+    @Binding var rowIndex: Int
+    @Binding var bingoBoard: Bingo
+    @Binding var userInfo: User
     
     var body: some View {
         ZStack {
@@ -20,7 +24,7 @@ struct ItemDetailView: View {
                 .padding()
             VStack {
                 HStack {
-                    Text("Detail Title")
+                    Text("\(bingoBoard.title[rowIndex][columnIndex])")
                         .font(.system(size: 28))
                         .bold()
                         .foregroundColor(.pink)
@@ -39,7 +43,7 @@ struct ItemDetailView: View {
                     .frame(maxWidth: .infinity, alignment: .trailing)
                 }
                 .padding(.trailing, 40)
-                Text("This is a description. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.")
+                Text("\(bingoBoard.description[rowIndex][columnIndex])")
                     .font(.system(size: 17))
                     .foregroundColor(.pink)
                     .frame(maxWidth: UIScreen.main.bounds.width * 0.7)
@@ -47,12 +51,23 @@ struct ItemDetailView: View {
                     .padding(.bottom, 20)
                     .padding(20)
                 Button {
-                    
+                    if bingoBoard.type[rowIndex][columnIndex] == 0{
+                        userInfo.progressTrust += 1
+                    }else if bingoBoard.type[rowIndex][columnIndex] == 1{
+                        userInfo.progressCommunication += 1
+                    }else{
+                        userInfo.progressUnderstanding += 1
+                    }
+                    testUser = userInfo
+                    showDetailView = false
+                    bingoBoard.tileCondition[rowIndex][columnIndex] = 1
+                    bingoTest = bingoBoard
+                    detectBingo()
                 } label : {
                     ZStack {
                         RoundedRectangle(cornerRadius: 10)
-                            .frame(width: 80, height: 40)
-                        Text("OK")
+                            .frame(width: 120, height: 40)
+                        Text("Complete")
                             .bold()
                             .foregroundColor(.white)
                     }
@@ -64,6 +79,58 @@ struct ItemDetailView: View {
         .cornerRadius(15)
         .shadow(radius: 5)
         .foregroundColor(.pink)
+    }
+    
+    func detectBingo(){
+    //Horizontal
+        for i in 0..<4{
+            var bingoTemp = bingoBoard.tileCondition
+            var rowBingo = true
+            for j in 0..<4{
+                if bingoBoard.tileCondition[i][j] == 1 || bingoBoard.tileCondition[i][j] == 2{
+                    bingoTemp[i][j] = 2
+                }else{
+                    rowBingo = false
+                    break
+                }
+            }
+            if rowBingo{
+                bingoBoard.tileCondition = bingoTemp
+            }
+        }
+        //Vertical
+        for i in 0..<4{
+            var bingoTemp = bingoBoard.tileCondition
+            var rowBingo = true
+            for j in 0..<4{
+                if bingoBoard.tileCondition[j][i] == 1 || bingoBoard.tileCondition[j][i] == 2{
+                    bingoTemp[j][i] = 2
+                }else{
+                    rowBingo = false
+                    break
+                }
+            }
+            if rowBingo{
+                bingoBoard.tileCondition = bingoTemp
+            }
+        }
+        
+        //Diagonal
+        
+        if ( bingoBoard.tileCondition[0][0] == 1 ||  bingoBoard.tileCondition[0][0] == 2) && ( bingoBoard.tileCondition[1][1] == 1 ||  bingoBoard.tileCondition[1][1] == 2) && ( bingoBoard.tileCondition[2][2] == 1 ||  bingoBoard.tileCondition[2][2] == 2) && ( bingoBoard.tileCondition[3][3] == 1 ||  bingoBoard.tileCondition[3][3] == 2){
+            bingoBoard.tileCondition[0][0] = 2
+            bingoBoard.tileCondition[1][1] = 2
+            bingoBoard.tileCondition[2][2] = 2
+            bingoBoard.tileCondition[3][3] = 2
+        }
+        
+        if ( bingoBoard.tileCondition[0][3] == 1 ||  bingoBoard.tileCondition[0][3] == 2) && ( bingoBoard.tileCondition[1][2] == 1 ||  bingoBoard.tileCondition[1][2] == 2) && ( bingoBoard.tileCondition[2][1] == 1 ||  bingoBoard.tileCondition[2][1] == 2) && ( bingoBoard.tileCondition[3][0] == 1 ||  bingoBoard.tileCondition[3][0] == 2){
+            bingoBoard.tileCondition[0][3] = 2
+            bingoBoard.tileCondition[1][2] = 2
+            bingoBoard.tileCondition[2][1] = 2
+            bingoBoard.tileCondition[3][0] = 2
+        }
+
     }
 }
 
@@ -83,6 +150,6 @@ struct BlurView: UIViewRepresentable {
 
 struct ItemDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        BingoPageView()
+        BingoPageView(userInfo: .constant(testUser))
     }
 }
