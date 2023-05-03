@@ -72,6 +72,24 @@ let promptSets =
         Prompt(id: 14, title: "Cultural Differences", description: "Discuss any cultural differences that exist between you.", type: 2),
         Prompt(id: 15, title: "Travel Journal", description: "Share a journal with each other to write about their experiences while traveling.", type: 0),
         
+    ],
+    [
+        Prompt(id: 0, title: "Adventure Time", description: "Create a photo album or scrapbook of their adventures abroad and share it with each other.", type: 0),
+            Prompt(id: 1, title: "Deeper Level", description: "Talk about your goals, aspirations, and plans for the future.", type: 1),
+            Prompt(id: 2, title: "Family Ties", description: "Talk about your childhood and family background to understand each other better.", type: 2),
+            Prompt(id: 3, title: "Image of You", description: "When you miss each other, what's the first thing that comes to mind? Share about it.", type: 1),
+            Prompt(id: 4, title: "Freebie", description: "Share with your partner what activities you like to do in your free time.", type: 1),
+            Prompt(id: 5, title: "Game Time", description: "Play online games together like chess, cards, or trivia.", type: 0),
+            Prompt(id: 6, title: "Book Worm", description: "Share with your partner about the books you have been reading lately.", type: 1),
+            Prompt(id: 7, title: "Interests", description: "Try to learn and appreciate your partner's interests or hobbies.", type: 2),
+            Prompt(id: 8, title: "Future Trip Planning", description: "Plan to meet up when possible and talk about your expectations for the visits.", type: 2),
+            Prompt(id: 9, title: "Cooking Session", description: "Share recipes and cook the same meal together over video call.", type: 0),
+            Prompt(id: 10, title: "Play Time", description: "Play games with your partner.", type: 1),
+            Prompt(id: 11, title: "Deep Talk", description: "Talk about your fears, worries, hopes and dreams for the future.", type: 2),
+            Prompt(id: 12, title: "Yoga", description: "Schedule a virtual workout or yoga session together.", type: 0),
+            Prompt(id: 13, title: "Planning Plans", description: "Take turns planning activities to do together.", type: 1),
+            Prompt(id: 14, title: "People Person", description: "Share about the important people in your life and what makes those relationships special.", type: 2),
+            Prompt(id: 15, title: "Trip Time", description: "Plan a future trip together and research activities and places to visit.", type: 0)
     ]
 ]
 
