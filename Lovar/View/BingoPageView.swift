@@ -105,6 +105,9 @@ struct BingoPageView: View {
                     Image("backToGarden")
                         .scaleEffect(0.6)
                         .offset(y: 10)
+                        .onTapGesture {
+                            navigateToGardenPageView()
+                        }
                     HStack(spacing: -160) {
                         HStack(spacing: -145) {
                             Image("babyBreathPink")
@@ -144,6 +147,12 @@ struct BingoPageView: View {
         }else{
             GardenPageView()
         }
+    }
+    
+    func navigateToGardenPageView() {
+        let gardenPageView = GardenPageView()
+        UIApplication.shared.windows.first?.rootViewController = UIHostingController(rootView: gardenPageView)
+        UIApplication.shared.windows.first?.makeKeyAndVisible()
     }
     
     
