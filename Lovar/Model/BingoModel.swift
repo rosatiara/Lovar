@@ -42,4 +42,3 @@ var descriptionFill = Array(repeating: Array(repeating: prompts[0].description, 
 
 var bingoTest = Bingo(id: 0, tileCondition: conditionFalse, title: titleFill, description: descriptionFill, type: typeZero, isCompleted: false, mood: "None", start_date: "-", end_date: "-")
 
-

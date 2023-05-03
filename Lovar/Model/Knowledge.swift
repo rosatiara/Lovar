@@ -18,5 +18,4 @@ let loveKnowledge = [
     Knowledge(knowledgeTitle: "Tree of Trust", knowledgeDesc: "", knowledgeImg: "ExpTree"),
     Knowledge(knowledgeTitle: "Flowers of Understanding", knowledgeDesc: "", knowledgeImg: "ExpFlower"),
     Knowledge(knowledgeTitle: "Butterfly of Communication", knowledgeDesc: "", knowledgeImg: "ExpButterfly"),
-    
 ]
