@@ -13,27 +13,16 @@ struct ProgressBarView: View {
     
     @State private var progressWidth = CGFloat(65)
     var body: some View {
-        HStack{
-            //Trust - 0
-            HStack(spacing: -5){
+        HStack (spacing: -10){
                 Image("ExpTree")
                     .resizable()
-                    .frame(width: 60, height: 60)
-            }
-            
-            //Communication - 1
-            HStack(spacing: -5){
+                    .frame(width: 80, height: 80)
                 Image("ExpFlower")
                     .resizable()
-                    .frame(width: 60, height: 60)
-            }
-            
-            //Understanding - 2
-            HStack(spacing: -5){
+                    .frame(width: 80, height: 80)
                 Image("ExpButterfly")
                     .resizable()
-                    .frame(width: 60, height: 60)
-            }
+                    .frame(width: 80, height: 80)
         }
     }
     func getWidth(progress: Int, required: Int) -> CGFloat{
