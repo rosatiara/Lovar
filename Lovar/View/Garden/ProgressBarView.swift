@@ -9,31 +9,79 @@ import SwiftUI
 
 
 struct ProgressBarView: View {
-    @Binding var userInfo: User
+    @State var showKnowledgeDetailView = false
+    @State private var selectedKnowledge: Knowledge?
     
-    @State private var progressWidth = CGFloat(65)
     var body: some View {
-        HStack (spacing: -10){
-                Image("ExpTree")
-                    .resizable()
-                    .frame(width: 80, height: 80)
-                Image("ExpFlower")
-                    .resizable()
-                    .frame(width: 80, height: 80)
-                Image("ExpButterfly")
-                    .resizable()
-                    .frame(width: 80, height: 80)
+        ZStack() {
+            VStack(spacing: 0) {
+                Text("Garden of Love")
+                    .font(Font.custom("Oregano-Regular", size: 34))
+                    .foregroundColor(Color("darkBrown"))
+                HStack (spacing: -10){
+                    ForEach(knowledges) { knowledge in
+                        KnowledgeIcon(knowledge: knowledge).onTapGesture {
+                            selectedKnowledge = knowledge
+                            showKnowledgeDetailView = true
+                        }
+                    }
+                }
+            }.offset(y: -UIScreen.main.bounds.height * 0.38)
+            if let knowledge = selectedKnowledge {
+                KnowledgeCardView(knowledge: knowledge)
+            }
         }
     }
-    func getWidth(progress: Int, required: Int) -> CGFloat{
-        let width = CGFloat(Double(progress) / Double(required) * Double(progressWidth))
+    
+    @ViewBuilder func KnowledgeIcon(knowledge: Knowledge) -> some View {
+        Image(knowledge.knowledgeIcon).resizable().frame(width: 60, height: 60)
+    }
+    
+    @ViewBuilder func KnowledgeCardView(knowledge: Knowledge) -> some View {
+        ZStack {
+            Rectangle()
+                .foregroundColor(Color("cream"))
+                .frame(width: UIScreen.main.bounds.width - 50 , height: UIScreen.main.bounds.height * 0.5)
+                .cornerRadius(15)
+                .padding()
+            VStack {
+                HStack {
+                    Spacer()
+                        .frame(width: UIScreen.main.bounds.width * 0.7)
+                    Button(action: {
+                        withAnimation {
+                            let gardenPageView = GardenPageView()
+                            UIApplication.shared.windows.first?.rootViewController = UIHostingController(rootView: gardenPageView)
+                            UIApplication.shared.windows.first?.makeKeyAndVisible()
+                        }
+                    }, label: {
+                        Image(systemName: "xmark.circle.fill")
+                            .font(.title)
+                        
+                    }).offset(y: -UIScreen.main.bounds.height * 0.125)
+                }
+                Text(knowledge.knowledgeTitle)
+                    .font(.system(size: 28))
+                    .bold()
+                Text(knowledge.knowledgeDesc)
+                    .font(.system(size: 17))
+                    .frame(maxWidth: UIScreen.main.bounds.width * 0.7)
+                    .multilineTextAlignment(.center)
+                    .padding(.bottom, 20)
+                    .padding(20)
+
+            }.foregroundColor(Color("darkBrown"))
+
+        }
         
-        return width
     }
 }
 
+
 struct ProgressBarView_Previews: PreviewProvider {
     static var previews: some View {
-        ProgressBarView(userInfo: .constant(testUser))
+        GardenPageView()
     }
 }
+
+

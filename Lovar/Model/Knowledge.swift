@@ -8,14 +8,15 @@
 import Foundation
 struct Knowledge: Identifiable {
     let id =  UUID().uuidString
+    let knowledgeIcon: String
     let knowledgeTitle: String
     let knowledgeDesc: String
     let knowledgeImg: String
 
 }
 
-let loveKnowledge = [
-    Knowledge(knowledgeTitle: "Tree of Trust", knowledgeDesc: "", knowledgeImg: "ExpTree"),
-    Knowledge(knowledgeTitle: "Flowers of Understanding", knowledgeDesc: "", knowledgeImg: "ExpFlower"),
-    Knowledge(knowledgeTitle: "Butterfly of Communication", knowledgeDesc: "", knowledgeImg: "ExpButterfly"),
+let knowledges = [
+    Knowledge(knowledgeIcon:"ExpTree", knowledgeTitle: "Tree of Trust", knowledgeDesc: "Lorem ipsum dolor sit amet", knowledgeImg: "ExpTree"),
+    Knowledge(knowledgeIcon:"ExpFlower", knowledgeTitle: "Flowers of Understanding", knowledgeDesc: "", knowledgeImg: "ExpFlower"),
+    Knowledge(knowledgeIcon:"ExpButterfly", knowledgeTitle: "Butterfly of Communication", knowledgeDesc: "", knowledgeImg: "ExpButterfly"),
 ]

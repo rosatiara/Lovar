@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct GardenPageView: View {
+    @State var showDetailView = false
     @State private var userInfo = testUser
     var body: some View {
         ZStack {
@@ -26,20 +27,17 @@ struct GardenPageView: View {
                     }
                 Rectangle() // Bingo Rock
                     .opacity(0.0001)
-                    .frame(width: 70, height: 40)
-                    .offset(x:-UIScreen.main.bounds.width * 0.02, y:UIScreen.main.bounds.height * 0.035)
+                    .frame(width: 75, height: 40)
+                    .offset(x:-UIScreen.main.bounds.width * 0.02, y:UIScreen.main.bounds.height * 0.03)
                     .onTapGesture {
                         navigateToBingoPageView()
                     }
             }
-            HStack(spacing: -10) {
-                ForEach(loveKnowledge) { knowledge in
-                    KnowledgeView(knowledge: knowledge)
-                }.offset(y: -UIScreen.main.bounds.height * 0.385)
-            }
+                ProgressBarView()
         }
         
     }
+    
     func navigateToBingoPageView() {
         let bingoPageView = BingoPageView(userInfo: $userInfo)
         UIApplication.shared.windows.first?.rootViewController = UIHostingController(rootView: bingoPageView)
@@ -59,14 +57,3 @@ struct GardenPageView_Previews: PreviewProvider {
     }
 }
 
-@ViewBuilder func KnowledgeView(knowledge: Knowledge) -> some View {
-    Image(knowledge.knowledgeImg)
-        .resizable()
-        .frame(width: 80, height: 80)
-        .onTapGesture {
-        }
-}
-
-@ViewBuilder func KnowledgeDetailView(knowledge: Knowledge) -> some View {
-    Text("test")
-}
