@@ -9,15 +9,7 @@ import SwiftUI
 
 
 struct ProgressBarView: View {
-    @State private var levelTrust = 1
-    @State private var levelCommunication = 1
-    @State private var levelUnderstanding = 1
-    @State private var progressTrust = 2
-    @State private var progressCommunication = 1
-    @State private var progressUnderstanding = 3
-    @State private var requiredTrust = 4
-    @State private var requiredCommunication = 4
-    @State private var requiredUnderstanding = 4
+    @Binding var userInfo: User
     
     @State private var progressWidth = CGFloat(65)
     var body: some View {
@@ -28,7 +20,7 @@ struct ProgressBarView: View {
                     .resizable()
                     .frame(width: 60, height: 60)
                 VStack(alignment: .leading, spacing: 3){
-                    Text("Level \(levelTrust)").font(.system(size: 14, weight: .regular))
+                    Text("Level \(userInfo.levelTrust)").font(.system(size: 14, weight: .regular))
                     ZStack(alignment: .leading){
                         
                         
@@ -37,20 +29,20 @@ struct ProgressBarView: View {
                             .frame(width: progressWidth, height: 18)
                             .foregroundColor(Color("yellow"))
                         
-                        HStack{
+                     
                             Image("exp2")
                                 .resizable()
-                                .frame(width: getWidth(progress: progressTrust, required: requiredTrust), height: 18)
+                                .frame(width: getWidth(progress: userInfo.progressTrust, required: userInfo.requiredProgressTrust), height: 18)
                             
                                 .foregroundColor(Color("pink1"))
                             
                             
                             
-                            Text("\(progressTrust)/\(requiredTrust)")
+                            Text("\(userInfo.progressTrust)/\(userInfo.requiredProgressTrust)")
                                 .font(.system(size: 12, weight: .regular))
                             
                             
-                        }
+                        
                     }
                 
                 }
@@ -62,19 +54,20 @@ struct ProgressBarView: View {
                     .resizable()
                     .frame(width: 60, height: 60)
                 VStack(alignment: .leading, spacing: 3){
-                    Text("Level \(levelCommunication)").font(.system(size: 14, weight: .regular))
+                    Text("Level \(userInfo.levelCommunication)").font(.system(size: 14, weight: .regular))
                     ZStack(alignment: .leading){
                         Rectangle()
                             .border(.green)
                             .frame(width: progressWidth, height: 18)
                             .foregroundColor(Color("yellow"))
                    
-                        Image("exp2")
-                            .resizable()
-                            .frame(width: getWidth(progress: progressCommunication, required: requiredCommunication), height: 18)
-                            .foregroundColor(Color("pink1"))
+                       
+                            Image("exp2")
+                                .resizable()
+                                .frame(width: getWidth(progress: userInfo.progressCommunication, required: userInfo.requiredProgressCommunication), height: 18)
+                                .foregroundColor(Color("pink1"))
                             
-                            Text(" \(progressCommunication)/\(requiredCommunication)")
+                            Text(" \(userInfo.progressCommunication)/\(userInfo.requiredProgressCommunication)")
                                 .font(.system(size: 12, weight: .regular))
                         
                         
@@ -89,22 +82,23 @@ struct ProgressBarView: View {
                     .resizable()
                     .frame(width: 60, height: 60)
                 VStack(alignment: .leading, spacing: 3){
-                    Text("Level \(levelUnderstanding)").font(.system(size: 14, weight: .regular))
+                    Text("Level \(userInfo.levelUnderstanding)").font(.system(size: 14, weight: .regular))
                     ZStack(alignment: .leading){
                         Rectangle()
                             .border(.green)
                             .frame(width: progressWidth, height: 18)
                             .foregroundColor(Color("yellow"))
                            
-                        Image("exp2")
-                            .resizable()
-                            .frame(width: getWidth(progress: progressUnderstanding, required: requiredUnderstanding), height: 18)
-                    
-                            .foregroundColor(Color("pink1"))
+                 
+                            Image("exp2")
+                                .resizable()
+                                .frame(width: getWidth(progress: userInfo.progressUnderstanding, required: userInfo.requiredProgressUnderstanding), height: 18)
                             
-                            Text(" \(progressUnderstanding)/\(requiredUnderstanding)")
+                                .foregroundColor(Color("pink1"))
+                            
+                            Text(" \(userInfo.progressUnderstanding)/\(userInfo.requiredProgressUnderstanding)")
                                 .font(.system(size: 12, weight: .regular))
-                        
+                            
                         
                     }
                 
@@ -121,6 +115,6 @@ struct ProgressBarView: View {
 
 struct ProgressBarView_Previews: PreviewProvider {
     static var previews: some View {
-        ProgressBarView()
+        ProgressBarView(userInfo: .constant(testUser))
     }
 }
