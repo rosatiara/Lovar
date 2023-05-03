@@ -49,6 +49,48 @@ let prompts = [
     Prompt(id: 17, title: "Exchanging Skills", description: "Take turns teaching each other a skill they have mastered.", type: 0),
     Prompt(id: 18, title: "Family Game Night", description: " Plan a virtual game night with friends or family from home.", type: 0),
     Prompt(id: 19, title: "Relationship Quotes", description: "Share their favorite quotes and discuss how they relate to their relationship.", type: 0),
+    
+]
+
+let promptSets =
+[
+    [
+        Prompt(id: 0, title: "Love Letter", description: "Write love letters to each other and mail them from the foreign country.", type: 0),
+        Prompt(id: 1, title: "Sharing Interests", description: "Talk about shared interests, hobbies, and news from your daily life.", type: 1),
+        Prompt(id: 2, title: "Love Letter", description: "Learn each other's love languages and try to communicate in those ways. (Take a love languages test and share the result with your partner.)", type: 2),
+        Prompt(id: 3, title: "Deep Conversation", description: "Have deep conversations about your feelings, emotions, and thoughts.", type: 1),
+        Prompt(id: 4, title: "Fun Games", description: "Play \"Would You Rather\" or \"never have I ever\" games via text, voice, or video call.", type: 1),
+        Prompt(id: 5, title: "Care Package", description: "Send care packages filled with their partner's favorite things.", type: 0),
+        Prompt(id: 6, title: "Photo Sharing", description: "Share photos and videos from your phone or social media accounts.", type: 1),
+        Prompt(id: 7, title: "How Does My Partner Feel?", description: "Take the time to understand each other's feelings and point of view.", type: 2),
+        Prompt(id: 8, title: "A Safe Place", description: "Avoid being judgmental and respect each other's decisions and choices.", type: 2),
+        Prompt(id: 9, title: "Date Night", description: "Plan a surprise virtual date night.", type: 0),
+        Prompt(id: 10, title: "Romantic Messaging", description: "Send romantic messages, quotes, or good morning/goodnight texts regularly for a few days.", type: 1),
+        Prompt(id: 11, title: "Giving Empathy", description: "Try to empathize with each other when things get tough.", type: 2),
+        Prompt(id: 12, title: "Movie Night", description: "Watch a movie or TV show together via a streaming service and chat about it.", type: 0),
+        Prompt(id: 13, title: "Open-Mindedness", description: "Ask open-ended questions about anything that comes to mind.", type: 1),
+        Prompt(id: 14, title: "Cultural Differences", description: "Discuss any cultural differences that exist between you.", type: 2),
+        Prompt(id: 15, title: "Travel Journal", description: "Share a journal with each other to write about their experiences while traveling.", type: 0),
+        
+    ],
+    [
+        Prompt(id: 0, title: "Adventure Time", description: "Create a photo album or scrapbook of their adventures abroad and share it with each other.", type: 0),
+            Prompt(id: 1, title: "Deeper Level", description: "Talk about your goals, aspirations, and plans for the future.", type: 1),
+            Prompt(id: 2, title: "Family Ties", description: "Talk about your childhood and family background to understand each other better.", type: 2),
+            Prompt(id: 3, title: "Image of You", description: "When you miss each other, what's the first thing that comes to mind? Share about it.", type: 1),
+            Prompt(id: 4, title: "Freebie", description: "Share with your partner what activities you like to do in your free time.", type: 1),
+            Prompt(id: 5, title: "Game Time", description: "Play online games together like chess, cards, or trivia.", type: 0),
+            Prompt(id: 6, title: "Book Worm", description: "Share with your partner about the books you have been reading lately.", type: 1),
+            Prompt(id: 7, title: "Interests", description: "Try to learn and appreciate your partner's interests or hobbies.", type: 2),
+            Prompt(id: 8, title: "Future Trip Planning", description: "Plan to meet up when possible and talk about your expectations for the visits.", type: 2),
+            Prompt(id: 9, title: "Cooking Session", description: "Share recipes and cook the same meal together over video call.", type: 0),
+            Prompt(id: 10, title: "Play Time", description: "Play games with your partner.", type: 1),
+            Prompt(id: 11, title: "Deep Talk", description: "Talk about your fears, worries, hopes and dreams for the future.", type: 2),
+            Prompt(id: 12, title: "Yoga", description: "Schedule a virtual workout or yoga session together.", type: 0),
+            Prompt(id: 13, title: "Planning Plans", description: "Take turns planning activities to do together.", type: 1),
+            Prompt(id: 14, title: "People Person", description: "Share about the important people in your life and what makes those relationships special.", type: 2),
+            Prompt(id: 15, title: "Trip Time", description: "Plan a future trip together and research activities and places to visit.", type: 0)
+    ]
 ]
 
 

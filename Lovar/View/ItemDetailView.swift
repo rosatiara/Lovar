@@ -61,8 +61,8 @@ struct ItemDetailView: View {
                     testUser = userInfo
                     showDetailView = false
                     bingoBoard.tileCondition[rowIndex][columnIndex] = 1
-                    bingoTest = bingoBoard
                     detectBingo()
+                    bingoTest = bingoBoard
                 } label : {
                     ZStack {
                         RoundedRectangle(cornerRadius: 10)

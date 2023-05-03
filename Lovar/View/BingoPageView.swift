@@ -14,6 +14,7 @@ struct BingoPageView: View {
     @State private var bingoRow = 4
     @State private var selectedRowIndex = 0
     @State private var selectedColumnIndex = 0
+    @State private var promptSetIndex = 0
     @Binding var userInfo: User
     
     var body: some View {
@@ -128,7 +129,16 @@ struct BingoPageView: View {
                     
                 }.frame(width: UIScreen.main.bounds.width * 0.5)
                     .onAppear {
-                        
+                        bingoBoard = bingoTest
+                        var promptIndex = 0
+                        for i in 0..<4 {
+                            for j in 0..<4 {
+                                bingoBoard.title[i][j] = promptSets[promptSetIndex][promptIndex].title
+                                bingoBoard.description[i][j] = promptSets[promptSetIndex][promptIndex].description
+                                bingoBoard.type[i][j] = promptSets[promptSetIndex][promptIndex].type
+                                promptIndex += 1
+                            }
+                        }
                     }
                 if(showDetailView) {
                     ItemDetailView(showDetailView: $showDetailView, columnIndex: $selectedColumnIndex, rowIndex: $selectedRowIndex, bingoBoard: $bingoBoard, userInfo: $userInfo)
