@@ -146,6 +146,15 @@ struct BingoPageView: View {
                 }.frame(width: UIScreen.main.bounds.width * 0.5)
                     .onAppear {
                         bingoBoard = bingoTest
+                        var promptIndex = 0
+                        for i in 0..<4 {
+                            for j in 0..<4 {
+                                bingoBoard.title[i][j] = promptSets[0][promptIndex].title
+                                bingoBoard.description[i][j] = promptSets[0][promptIndex].description
+                                bingoBoard.type[i][j] = promptSets[0][promptIndex].type
+                                promptIndex += 1
+                            }
+                        }
                     }
                 
                 if(showDetailView){
