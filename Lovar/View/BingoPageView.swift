@@ -18,7 +18,7 @@ struct BingoPageView: View {
         ZStack{
             Color("cream").edgesIgnoringSafeArea(.all)
             VStack {
-                Spacer().frame(height: UIScreen.main.bounds.height * 0.1)
+                Spacer().frame(height: UIScreen.main.bounds.height * 0.2)
                 Text("BINGO!")
                     .font(Font.custom("Oregano-Regular", size: 48)).padding()
                     .foregroundColor(Color("darkBrown"))
@@ -61,12 +61,18 @@ struct BingoPageView: View {
                         }
                     }
                 })
-                Image("backToGarden")
-                    .scaleEffect(0.65)
-                    .offset(y: 20)
-                    .onTapGesture {
-                        navigateToGardenPageView()
-                    }
+                HStack(spacing: -200) {
+                    Image("backToGarden")
+                        .scaleEffect(0.65)
+                        .offset(y: 20)
+                        .onTapGesture {
+                            navigateToGardenPageView()
+                        }
+                    Image("sunflower")
+                        .scaleEffect(0.5)
+                        .offset(x: 40, y: 60)
+                }
+                
                 HStack(spacing: -150) {
                     HStack(spacing: -145) {
                         Image("babyBreathPink")
@@ -90,7 +96,7 @@ struct BingoPageView: View {
                             .scaleEffect(1.75)
                     }
                     
-                }
+                }.offset(y:-30)
                 
             }.frame(width: UIScreen.main.bounds.width * 0.5)
             .onAppear {
