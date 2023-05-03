@@ -10,7 +10,6 @@ import SwiftUI
 struct GardenPageView: View {
     @State private var userInfo = testUser
     var body: some View {
-
         ZStack {
             Image("gardenEmpty")
                 .resizable()
