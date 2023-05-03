@@ -22,6 +22,8 @@
 		31045B6329FA145B00F2E9F1 /* BingoPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31045B6229FA145B00F2E9F1 /* BingoPageView.swift */; };
 		31045B6E29FA15B800F2E9F1 /* GardenItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31045B6D29FA15B800F2E9F1 /* GardenItemView.swift */; };
 		31045B7029FA15C500F2E9F1 /* ProgressBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31045B6F29FA15C500F2E9F1 /* ProgressBarView.swift */; };
+		311224EC2A02399100865C49 /* TypeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311224EB2A02399100865C49 /* TypeDetailView.swift */; };
+		311224F02A023DBC00865C49 /* Knowledge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311224EF2A023DBC00865C49 /* Knowledge.swift */; };
 		31257C4229FB8E3A00467D6C /* ItemDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31257C4129FB8E3A00467D6C /* ItemDetailView.swift */; };
 		3127B21129FFEC9300A2A07E /* Chivo in Resources */ = {isa = PBXBuildFile; fileRef = 3127B20F29FFEC9300A2A07E /* Chivo */; };
 		3127B21229FFEC9300A2A07E /* Oregano in Resources */ = {isa = PBXBuildFile; fileRef = 3127B21029FFEC9300A2A07E /* Oregano */; };
@@ -72,6 +74,8 @@
 		31045B6229FA145B00F2E9F1 /* BingoPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BingoPageView.swift; sourceTree = "<group>"; };
 		31045B6D29FA15B800F2E9F1 /* GardenItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GardenItemView.swift; sourceTree = "<group>"; };
 		31045B6F29FA15C500F2E9F1 /* ProgressBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBarView.swift; sourceTree = "<group>"; };
+		311224EB2A02399100865C49 /* TypeDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeDetailView.swift; sourceTree = "<group>"; };
+		311224EF2A023DBC00865C49 /* Knowledge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Knowledge.swift; sourceTree = "<group>"; };
 		31257C4129FB8E3A00467D6C /* ItemDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailView.swift; sourceTree = "<group>"; };
 		3127B20F29FFEC9300A2A07E /* Chivo */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Chivo; sourceTree = "<group>"; };
 		3127B21029FFEC9300A2A07E /* Oregano */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Oregano; sourceTree = "<group>"; };
@@ -184,6 +188,7 @@
 		31045B5629FA12C100F2E9F1 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				311224EF2A023DBC00865C49 /* Knowledge.swift */,
 				D9471B3F2A00B34E00558FB4 /* BingoModel.swift */,
 				D9471B3D2A00B34E00558FB4 /* PromptListModel.swift */,
 				D9471B3E2A00B34E00558FB4 /* UserModel.swift */,
@@ -201,6 +206,7 @@
 				31045B6229FA145B00F2E9F1 /* BingoPageView.swift */,
 				31257C4129FB8E3A00467D6C /* ItemDetailView.swift */,
 				3160485B2A020D2A00A978E9 /* CongratulationsView.swift */,
+				311224EB2A02399100865C49 /* TypeDetailView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -391,6 +397,8 @@
 				D9471B412A00B34E00558FB4 /* UserModel.swift in Sources */,
 				31045B6329FA145B00F2E9F1 /* BingoPageView.swift in Sources */,
 				3160485C2A020D2A00A978E9 /* CongratulationsView.swift in Sources */,
+				311224F02A023DBC00865C49 /* Knowledge.swift in Sources */,
+				311224EC2A02399100865C49 /* TypeDetailView.swift in Sources */,
 				31257C4229FB8E3A00467D6C /* ItemDetailView.swift in Sources */,
 				D9471B422A00B34E00558FB4 /* BingoModel.swift in Sources */,
 				31045B6129FA144800F2E9F1 /* HistoryPageView.swift in Sources */,

@@ -32,11 +32,13 @@ struct GardenPageView: View {
                         navigateToBingoPageView()
                     }
             }
-                
-            ProgressBarView(userInfo: $userInfo)
-                .offset(y: -UIScreen.main.bounds.height * 0.4)
+            HStack(spacing: -10) {
+                ForEach(loveKnowledge) { knowledge in
+                    KnowledgeView(knowledge: knowledge)
+                }.offset(y: -UIScreen.main.bounds.height * 0.385)
+            }
         }
-
+        
     }
     func navigateToBingoPageView() {
         let bingoPageView = BingoPageView(userInfo: $userInfo)
@@ -55,4 +57,16 @@ struct GardenPageView_Previews: PreviewProvider {
     static var previews: some View {
         GardenPageView()
     }
+}
+
+@ViewBuilder func KnowledgeView(knowledge: Knowledge) -> some View {
+    Image(knowledge.knowledgeImg)
+        .resizable()
+        .frame(width: 80, height: 80)
+        .onTapGesture {
+        }
+}
+
+@ViewBuilder func KnowledgeDetailView(knowledge: Knowledge) -> some View {
+    Text("test")
 }
