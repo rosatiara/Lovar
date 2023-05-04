@@ -75,7 +75,9 @@ struct GardenPageView: View {
 struct ButterflyAreaView: View {
     var butterfliesWidthArea = UIScreen.main.bounds.width
     var butterfliesHeightArea = UIScreen.main.bounds.height * 0.3
-    let butterflyOffsets = testGarden.butterflyOffset
+    
+    var butterflyImages = [testGarden.butterflyImages]
+    var butterflyOffsets = testGarden.butterflyOffset
     var body: some View {
         ZStack {
             Rectangle()
@@ -84,7 +86,7 @@ struct ButterflyAreaView: View {
                 .offset(y: butterfliesWidthArea * 0.5)
 
             ForEach(0..<butterflyOffsets.count){ index in
-                Image("butterflyBlue") // change to butterfly
+                testGarden.butterflyImages[index]
                     .resizable()
                     .scaledToFit()
                     .frame(width: 100, height: 90)
