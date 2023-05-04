@@ -107,13 +107,35 @@ final class ViewModel: ObservableObject {
             _ = try await database.modifyRecords(saving: [contact.associatedRecord, share], deleting: [])
             return (share, container)
         }
-
         guard let share = try await database.record(for: existingShare.recordID) as? CKShare else {
             throw ViewModelError.invalidRemoteShare
         }
-
         return (share, container)
     }
+    
+    
+    func resetContact() async throws {
+            let id = CKRecord.ID(zoneID: recordZone.zoneID)
+            let contactRecord = CKRecord(recordType: "SharedContact", recordID: id)
+            for i in 1...4 {
+                for j in 1...4{
+                    contactRecord["tile"] = "\(i)\(j)"
+                    contactRecord["isCompleted"] = 0
+                    
+                    do {
+                        try await database.save(contactRecord)
+                        print("kesave")
+                    } catch {
+                        debugPrint("ERROR: Failed to save new Contact: \(error)")
+                        throw error
+                    }
+                    
+                }
+            }
+            
+
+            
+        }
 //   https://www.icloud.com/share/0868BumojMLx38vCCqhuq3prQ#Contact:_Cowok
     // MARK: - Private
 

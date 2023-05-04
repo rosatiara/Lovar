@@ -10,32 +10,44 @@ import SwiftUI
 struct GardenPageView: View {
     @State var showDetailView = false
     @State private var userInfo = testUser
+    @EnvironmentObject private var vm: ViewModel
+    @State var openCount: Int = 0
 
     var body: some View {
         ZStack {
             Image("gardenEmpty")
                 .resizable()
                 .edgesIgnoringSafeArea(.all)
+               
             
             VStack {
                 Rectangle()
                     .opacity(0.0001)
                     .foregroundColor(.brown)
-                    .offset(x: -UIScreen.main.bounds.width * 0.35, y: UIScreen.main.bounds.height * 0.02)
-                    .frame(width: 80, height: 30)
+                    .offset(x: -UIScreen.main.bounds.width * 0.35, y: UIScreen.main.bounds.height * 0.04)
+                    .frame(width: 80, height: 120)
                     .onTapGesture {
                         navigateToHistoryPageView()
                         
                     }
                 Rectangle() // Bingo Rock
                     .opacity(0.0001)
-                    .frame(width: 75, height: 40)
-                    .offset(x:-UIScreen.main.bounds.width * 0.02, y:UIScreen.main.bounds.height * 0.03)
+                    .frame(width: 100, height: 60)
+                    .offset(x:-UIScreen.main.bounds.width * 0.02, y:-UIScreen.main.bounds.height * 0.03)
                     .onTapGesture {
                         navigateToBingoPageView()
                     }
             }
             ProgressBarView()
+            
+        }.onAppear{
+            Task{
+                openCount = openCount + 1
+                if openCount < 1 {
+                    try await vm.resetContact()
+                }
+                
+            }
             
         }.overlay {
             VStack {
@@ -71,9 +83,10 @@ struct ButterflyAreaView: View {
                 .offset(y: butterfliesWidthArea * 0.5)
             
             ForEach(0..<butterflyOffsets.count){ index in
-                Image("sunflower") // change to butterfly
+                Image("butterflyBlue") // change to butterfly
                     .resizable()
-                    .frame(width: 100, height: 100)
+                    .scaledToFit()
+                    .frame(width: 100, height: 90)
                     .position(
                         x: butterflyOffsets[index].x,
                         y: butterflyOffsets[index].y
@@ -120,4 +133,3 @@ struct GardenPageView_Previews: PreviewProvider {
         GardenPageView()
     }
 }
-

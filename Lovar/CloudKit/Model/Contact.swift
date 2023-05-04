@@ -11,7 +11,7 @@ import CloudKit
 struct Contact: Identifiable {
     let id: String
     let tile: String
-    let isCompleted: Bool
+    let isCompleted: Int
     let associatedRecord: CKRecord
 }
 
@@ -20,7 +20,7 @@ extension Contact {
     /// - Parameter record: CloudKit record to pull values from.
     init?(record: CKRecord) {
         guard let tile = record["tile"] as? String,
-              let isCompleted = record["isCompleted"] as? Bool else {
+              let isCompleted = record["isCompleted"] as? Int else {
             return nil
         }
 

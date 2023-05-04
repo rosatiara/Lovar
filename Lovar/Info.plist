@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key></key>
-	<string>$(MARKETING_VERSION)</string>
+	<string></string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>Chivo/static/Chivo-Italic.ttf</string>

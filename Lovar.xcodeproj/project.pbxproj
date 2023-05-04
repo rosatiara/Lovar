@@ -33,6 +33,7 @@
 		311225052A03741400865C49 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311225042A03741400865C49 /* ViewModel.swift */; };
 		311225072A03742700865C49 /* CloudSharingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311225062A03742700865C49 /* CloudSharingView.swift */; };
 		3112250A2A0374A000865C49 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311225092A0374A000865C49 /* Contact.swift */; };
+		3112250C2A037CD700865C49 /* LoadingTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3112250B2A037CD700865C49 /* LoadingTimer.swift */; };
 		31257C4229FB8E3A00467D6C /* ItemDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31257C4129FB8E3A00467D6C /* ItemDetailView.swift */; };
 		3127B21129FFEC9300A2A07E /* Chivo in Resources */ = {isa = PBXBuildFile; fileRef = 3127B20F29FFEC9300A2A07E /* Chivo */; };
 		3127B21229FFEC9300A2A07E /* Oregano in Resources */ = {isa = PBXBuildFile; fileRef = 3127B21029FFEC9300A2A07E /* Oregano */; };
@@ -94,6 +95,7 @@
 		311225042A03741400865C49 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		311225062A03742700865C49 /* CloudSharingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudSharingView.swift; sourceTree = "<group>"; };
 		311225092A0374A000865C49 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
+		3112250B2A037CD700865C49 /* LoadingTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingTimer.swift; sourceTree = "<group>"; };
 		31257C4129FB8E3A00467D6C /* ItemDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailView.swift; sourceTree = "<group>"; };
 		3127B20F29FFEC9300A2A07E /* Chivo */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Chivo; sourceTree = "<group>"; };
 		3127B21029FFEC9300A2A07E /* Oregano */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Oregano; sourceTree = "<group>"; };
@@ -234,6 +236,7 @@
 		31045B5829FA12F900F2E9F1 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				3112250B2A037CD700865C49 /* LoadingTimer.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -460,6 +463,7 @@
 				31257C4229FB8E3A00467D6C /* ItemDetailView.swift in Sources */,
 				D9471B422A00B34E00558FB4 /* BingoModel.swift in Sources */,
 				311225012A0373F000865C49 /* Config.swift in Sources */,
+				3112250C2A037CD700865C49 /* LoadingTimer.swift in Sources */,
 				31045B6129FA144800F2E9F1 /* HistoryPageView.swift in Sources */,
 				311225072A03742700865C49 /* CloudSharingView.swift in Sources */,
 				31045B2729FA0D8100F2E9F1 /* LovarApp.swift in Sources */,
@@ -636,7 +640,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = Learning.LovarApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Learning.Sharing;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -667,7 +671,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = Learning.LovarApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Learning.Sharing;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
