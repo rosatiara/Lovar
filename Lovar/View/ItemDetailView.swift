@@ -57,7 +57,8 @@ struct ItemDetailView: View {
                     }else if bingoBoard.type[rowIndex][columnIndex] == 1{
                         testGarden.butterflyOffset.append(CGPoint(x: .random(in: 0..<UIScreen.main.bounds.width), y: .random(in: 0..<UIScreen.main.bounds.height * 0.5)))
                     }else{
-                        userInfo.progressUnderstanding += 1
+                        testGarden.flowerOffset.append(CGPoint(x: .random(in: 0..<UIScreen.main.bounds.width), y: .random(in: 0..<UIScreen.main.bounds.height * 0.1)))
+
                     }
                     testUser = userInfo
                     showDetailView = false

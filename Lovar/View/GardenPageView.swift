@@ -18,7 +18,8 @@ struct GardenPageView: View {
             Image("gardenEmpty")
                 .resizable()
                 .edgesIgnoringSafeArea(.all)
-            ButterflyAreaView()
+               
+            
             VStack {
                 Rectangle()
                     .opacity(0.0001)
@@ -37,7 +38,13 @@ struct GardenPageView: View {
                         navigateToBingoPageView()
                     }
             }
-                ProgressBarView()
+            ProgressBarView()
+            
+        }.overlay {
+            VStack {
+                ButterflyAreaView()
+                FlowersAreaView()
+            }
         }
         
     }
@@ -75,11 +82,8 @@ struct ButterflyAreaView: View {
                         y: butterflyOffsets[index].y
                     )
             }
-            // add butterflies randomly..
-            //
-            //
-            
-        }.frame(width: butterfliesWidthArea, height: butterfliesHeightArea).offset(y: -butterfliesWidthArea*0.4)
+     
+        }.frame(width: butterfliesWidthArea, height: butterfliesHeightArea)
     }
     
 }
@@ -89,15 +93,27 @@ struct FlowersAreaView: View {
     var flowersWidthArea = UIScreen.main.bounds.width
     var flowersHeightArea = UIScreen.main.bounds.height * 0.3
     
+    var flowersImg = ["daisy", "sunflower1"]
+    
+    let flowerOffsets = testGarden.flowerOffset
+    
     var body: some View {
         ZStack {
             Rectangle()
                 .opacity(0.0001)
                 .frame(width: flowersWidthArea, height: flowersHeightArea)
                 .offset(y: flowersWidthArea * 0.5)
+            ForEach(0..<flowerOffsets.count) { index in
+                Image(flowersImg.randomElement()!)
+                    .resizable()
+                    .frame(width: 100, height: 100)
+                    .position(
+                        x: flowerOffsets[index].x,
+                        y: flowerOffsets[index].y
+                    )
+            }
             
-            
-        }
+        }.frame(maxHeight: flowersHeightArea)
     }
 }
 
