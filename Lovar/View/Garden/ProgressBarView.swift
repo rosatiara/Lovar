@@ -41,8 +41,8 @@ struct ProgressBarView: View {
         ZStack {
             Rectangle()
                 .foregroundColor(Color("cream"))
-                .frame(width: UIScreen.main.bounds.width - 50 , height: UIScreen.main.bounds.height * 0.5)
-                .cornerRadius(15)
+                .frame(width: UIScreen.main.bounds.width - 50 , height: UIScreen.main.bounds.height * 0.6)
+                .cornerRadius(20)
                 .padding()
             VStack {
                 HStack {
@@ -58,15 +58,17 @@ struct ProgressBarView: View {
                         Image(systemName: "xmark.circle.fill")
                             .font(.title)
                         
-                    }).offset(y: -UIScreen.main.bounds.height * 0.125)
+                    }).offset(x: -10, y: 0)
                 }
                 Text(knowledge.knowledgeTitle)
                     .font(.system(size: 28))
                     .bold()
+                    .multilineTextAlignment(.center)
+                    .frame(maxWidth: 220)
                 Text(knowledge.knowledgeDesc)
                     .font(.system(size: 17))
-                    .frame(maxWidth: UIScreen.main.bounds.width * 0.7)
-                    .multilineTextAlignment(.center)
+                    .frame(maxWidth: UIScreen.main.bounds.width * 0.65)
+                    .multilineTextAlignment(.leading)
                     .padding(.bottom, 20)
                     .padding(20)
 

@@ -11,6 +11,8 @@ struct GardenPageView: View {
     @State var showDetailView = false
     @State private var userInfo = testUser
     
+    
+    
     var body: some View {
         ZStack {
             Image("gardenEmpty")
@@ -53,16 +55,36 @@ struct GardenPageView: View {
     }
 }
 
-struct FlowersAreaView: View {
-    // for setting flowers position
-    let flowersAreaWidth = UIScreen.main.bounds.width
-    let flowersAreaHeight = UIScreen.main.bounds.height * 0.3
+struct ButterflyAreaView: View {
+    var butterfliesWidthArea = UIScreen.main.bounds.width
+    var butterfliesHeightArea = UIScreen.main.bounds.height * 0.3
     var body: some View {
         ZStack {
             Rectangle()
                 .opacity(0.0001)
-                .frame(width: flowersAreaWidth, height: flowersAreaHeight)
-                .offset(y: flowersAreaWidth * 0.5)
+                .frame(width: butterfliesWidthArea, height: butterfliesHeightArea)
+                .offset(y: butterfliesWidthArea * 0.5)
+            
+            // add butterflies randomly..
+            //
+            //
+            
+        }
+    }
+    
+}
+
+struct FlowersAreaView: View {
+    // for setting flowers position
+    var flowersWidthArea = UIScreen.main.bounds.width
+    var flowersHeightArea = UIScreen.main.bounds.height * 0.3
+    
+    var body: some View {
+        ZStack {
+            Rectangle()
+                .opacity(0.0001)
+                .frame(width: flowersWidthArea, height: flowersHeightArea)
+                .offset(y: flowersWidthArea * 0.5)
             
             // add flowers randomly..
             //
