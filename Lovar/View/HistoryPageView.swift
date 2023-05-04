@@ -17,7 +17,7 @@ struct HistoryPageView: View {
             VStack {
                 Spacer()
                     .frame(height: UIScreen.main.bounds.height*0.15)
-                    Text("Lovar History")
+                    Text("Lovar Album")
                         .font(Font.custom("Oregano-Regular", size: 40))
                 VStack {
                     TopBar(selected: self.$selected).offset(y:32)

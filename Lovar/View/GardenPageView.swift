@@ -10,6 +10,10 @@ import SwiftUI
 struct GardenPageView: View {
     @State var showDetailView = false
     @State private var userInfo = testUser
+    
+    let screenWidth = UIScreen.main.bounds.width
+    let screenHeight = UIScreen.main.bounds.height
+    
     var body: some View {
         ZStack {
             Image("gardenEmpty")
