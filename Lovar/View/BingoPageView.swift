@@ -15,6 +15,7 @@ struct BingoPageView: View {
     @State private var selectedRowIndex = 0
     @State private var selectedColumnIndex = 0
     @State private var promptSetIndex = 0
+    @State private var congratsScreen = false
     @Binding var userInfo: User
     
     var body: some View {
@@ -141,10 +142,12 @@ struct BingoPageView: View {
                         }
                     }
                 if(showDetailView) {
-                    ItemDetailView(showDetailView: $showDetailView, columnIndex: $selectedColumnIndex, rowIndex: $selectedRowIndex, bingoBoard: $bingoBoard, userInfo: $userInfo)
+                    ItemDetailView(showDetailView: $showDetailView, columnIndex: $selectedColumnIndex, rowIndex: $selectedRowIndex, congratsScreen: $congratsScreen, bingoBoard: $bingoBoard, userInfo: $userInfo)
                 }
                 
-                
+                if(congratsScreen){
+                    CongratulationsView(congratsScreen: $congratsScreen)
+                }
             }
         } else {
             GardenPageView()
