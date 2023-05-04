@@ -53,7 +53,7 @@ struct ItemDetailView: View {
                     .padding(20)
                 Button {
                     if bingoBoard.type[rowIndex][columnIndex] == 0{
-                        userInfo.progressTrust += 1
+                       
                     }else if bingoBoard.type[rowIndex][columnIndex] == 1{
                         testGarden.butterflyOffset.append(CGPoint(x: .random(in: 0..<UIScreen.main.bounds.width), y: .random(in: 0..<UIScreen.main.bounds.height * 0.5)))
                     }else{
