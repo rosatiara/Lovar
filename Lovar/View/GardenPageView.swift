@@ -86,9 +86,6 @@ struct FlowersAreaView: View {
                 .frame(width: flowersWidthArea, height: flowersHeightArea)
                 .offset(y: flowersWidthArea * 0.5)
             
-            // add flowers randomly..
-            //
-            //
             
         }
     }
