@@ -38,6 +38,12 @@ struct GardenPageView: View {
                         navigateToBingoPageView()
                     }
             }
+            .overlay {
+                VStack {
+                    ButterflyAreaView()
+                    FlowersAreaView()
+                }
+            }
             ProgressBarView()
             
         }.onAppear{
@@ -49,11 +55,6 @@ struct GardenPageView: View {
                 
             }
             
-        }.overlay {
-            VStack {
-                ButterflyAreaView()
-                FlowersAreaView()
-            }
         }
         
     }
@@ -81,7 +82,7 @@ struct ButterflyAreaView: View {
                 .opacity(0.0001)
                 .frame(width: butterfliesWidthArea, height: butterfliesHeightArea)
                 .offset(y: butterfliesWidthArea * 0.5)
-            
+
             ForEach(0..<butterflyOffsets.count){ index in
                 Image("butterflyBlue") // change to butterfly
                     .resizable()
@@ -92,18 +93,53 @@ struct ButterflyAreaView: View {
                         y: butterflyOffsets[index].y
                     )
             }
-     
+
         }.frame(width: butterfliesWidthArea, height: butterfliesHeightArea)
     }
-    
+
 }
+
+//struct ButterflyAreaView: View {
+//    var butterfliesWidthArea = UIScreen.main.bounds.width
+//    var butterfliesHeightArea = UIScreen.main.bounds.height * 0.3
+//    let butterflyOffsets = testGarden.butterflyOffset
+//    @State var randomButterfly: Image?
+//
+//    var body: some View {
+//        ZStack {
+//            Rectangle()
+//                .opacity(0.0001)
+//                .frame(width: butterfliesWidthArea, height: butterfliesHeightArea)
+//                .offset(y: butterfliesWidthArea * 0.5)
+//
+//            ForEach(0..<butterflyOffsets.count){ index in
+//                let butterflyImage = randomButterfly ?? Image("butterflyBlue")
+//                butterflyImage
+//                    .resizable()
+//                    .scaledToFit()
+//                    .frame(width: 100, height: 90)
+//                    .position(
+//                        x: butterflyOffsets[index].x,
+//                        y: butterflyOffsets[index].y
+//                    )
+//            }
+//
+//        }.frame(width: butterfliesWidthArea, height: butterfliesHeightArea)
+//        .onAppear {
+//            randomButterfly = Image(butterflyImages.randomElement() ?? "butterflyBlue")
+//        }
+//    }
+//
+//    let butterflyImages = ["butterflyBlue", "sunflower1", "grass"]
+//}
+
 
 struct FlowersAreaView: View {
     // for setting flowers position
     var flowersWidthArea = UIScreen.main.bounds.width
     var flowersHeightArea = UIScreen.main.bounds.height * 0.3
     
-    var flowerImages = testGarden.flowerImages
+    var flowerImages = [testGarden.flowerImages]
     var flowerOffsets = testGarden.flowerOffset
     
     
