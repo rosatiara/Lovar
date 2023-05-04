@@ -16,7 +16,6 @@ struct GardenPageView: View {
             Image("gardenEmpty")
                 .resizable()
                 .edgesIgnoringSafeArea(.all)
-               
             
             VStack {
                 Rectangle()
@@ -104,6 +103,7 @@ struct FlowersAreaView: View {
             ForEach(0..<flowerOffsets.count) { index in
                 Image(flowersImg.randomElement()!)
                     .resizable()
+                    .scaledToFit()
                     .frame(width: 100, height: 100)
                     .position(
                         x: flowerOffsets[index].x,
