@@ -71,9 +71,9 @@ struct ProgressBarView: View {
                     .multilineTextAlignment(.leading)
                     .padding(.bottom, 20)
                     .padding(20)
-
+                
             }.foregroundColor(Color("darkBrown"))
-
+            
         }
         
     }

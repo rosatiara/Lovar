@@ -12,7 +12,7 @@ struct User: Hashable{
     var name: String
     var patnerId: Int
     var bingoHistory: [Int]
-
+    
     
     init(id: Int, name: String, patnerId: Int, bingoHistory: [Int]) {
         self.id = id

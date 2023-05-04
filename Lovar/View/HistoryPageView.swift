@@ -17,8 +17,8 @@ struct HistoryPageView: View {
             VStack {
                 Spacer()
                     .frame(height: UIScreen.main.bounds.height*0.15)
-                    Text("Lovar Album")
-                        .font(Font.custom("Oregano-Regular", size: 40))
+                Text("Lovar Album")
+                    .font(Font.custom("Oregano-Regular", size: 40))
                 VStack {
                     TopBar(selected: self.$selected).offset(y:32)
                     if self.selected == 0 {
@@ -27,22 +27,22 @@ struct HistoryPageView: View {
                         BingoHistory()
                     }
                 }.offset(y: -30)
-                    Image("backToGarden")
-                        .scaleEffect(0.75)
-                        .offset(x: 90, y: -70)
-                        .onTapGesture {
-                            navigateToGardenPageView()
-                        }
+                Image("backToGarden")
+                    .scaleEffect(0.75)
+                    .offset(x: 90, y: -70)
+                    .onTapGesture {
+                        navigateToGardenPageView()
+                    }
                 
             }
         }.foregroundColor(Color("darkBrown"))
         
     }
     func navigateToGardenPageView() {
-            let gardenPageView = GardenPageView()
-            UIApplication.shared.windows.first?.rootViewController = UIHostingController(rootView: gardenPageView)
-            UIApplication.shared.windows.first?.makeKeyAndVisible()
-        }
+        let gardenPageView = GardenPageView()
+        UIApplication.shared.windows.first?.rootViewController = UIHostingController(rootView: gardenPageView)
+        UIApplication.shared.windows.first?.makeKeyAndVisible()
+    }
 }
 
 struct TopBar: View {
@@ -129,7 +129,7 @@ struct BingoPicture: View {
                 //                Rectangle()
                 //                    .frame(width: 90, height: 146)
                 // masukkin variable garden picture di sini
-               
+                
                 
             }
             Text("No History")

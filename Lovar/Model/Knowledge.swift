@@ -12,7 +12,7 @@ struct Knowledge: Identifiable {
     let knowledgeTitle: String
     let knowledgeDesc: String
     let knowledgeImg: String
-
+    
 }
 
 let knowledges = [

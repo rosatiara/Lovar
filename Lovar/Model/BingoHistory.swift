@@ -19,4 +19,3 @@ struct HistoryBingo{
         self.month = month
     }
 }
-

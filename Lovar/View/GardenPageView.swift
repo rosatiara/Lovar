@@ -12,13 +12,13 @@ struct GardenPageView: View {
     @State private var userInfo = testUser
     @EnvironmentObject private var vm: ViewModel
     @State var openCount: Int = 0
-
+    
     var body: some View {
         ZStack {
             Image("gardenEmpty")
                 .resizable()
                 .edgesIgnoringSafeArea(.all)
-               
+            
             
             VStack {
                 Rectangle()
@@ -84,7 +84,7 @@ struct ButterflyAreaView: View {
                 .opacity(0.0001)
                 .frame(width: butterfliesWidthArea, height: butterfliesHeightArea)
                 .offset(y: butterfliesWidthArea * 0.5)
-
+            
             ForEach(0..<butterflyOffsets.count){ index in
                 testGarden.butterflyImages[index]
                     .resizable()
@@ -95,10 +95,10 @@ struct ButterflyAreaView: View {
                         y: butterflyOffsets[index].y
                     )
             }
-
+            
         }.frame(width: butterfliesWidthArea, height: butterfliesHeightArea)
     }
-
+    
 }
 
 struct FlowersAreaView: View {
@@ -128,7 +128,7 @@ struct FlowersAreaView: View {
             }
             
         }.frame(maxHeight: flowersHeightArea)
-            
+        
     }
 }
 

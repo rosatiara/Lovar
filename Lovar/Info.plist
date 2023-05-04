@@ -6,10 +6,10 @@
 	<string></string>
 	<key>UIAppFonts</key>
 	<array>
-		<string>Chivo/static/Chivo-Italic.ttf</string>
-		<string>Chivo/static/Chivo-Regular.ttf</string>
-		<string>Oregano/Oregano-Italic.ttf</string>
-		<string>Oregano/Oregano-Regular.ttf</string>
+		<string>Fonts/Chivo/static/Chivo-Italic.ttf</string>
+		<string>Fonts/Chivo/static/Chivo-Regular.ttf</string>
+		<string>Fonts/Oregano/Oregano-Italic.ttf</string>
+		<string>Fonts/Oregano/Oregano-Regular.ttf</string>
 	</array>
 </dict>
 </plist>

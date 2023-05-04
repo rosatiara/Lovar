@@ -19,7 +19,7 @@ struct Bingo: Hashable{
     var start_date: String
     var end_date: String
     
- 
+    
     init(id: Int, tileCondition: [[Int]], title: [[String]], description: [[String]], type: [[Int]], isCompleted: Bool, mood: String, start_date: String, end_date: String) {
         self.id = id
         self.tileCondition = tileCondition

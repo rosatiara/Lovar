@@ -164,10 +164,9 @@
 		31045B2529FA0D8100F2E9F1 /* Lovar */ = {
 			isa = PBXGroup;
 			children = (
+				31D3DA152A03F0430036A608 /* Fonts */,
 				311224FA2A0373B200865C49 /* CloudKit */,
 				311224F32A02B8B000865C49 /* Resources */,
-				3127B20F29FFEC9300A2A07E /* Chivo */,
-				3127B21029FFEC9300A2A07E /* Oregano */,
 				313E20FF29FA41FA00DD5B59 /* Lovar.entitlements */,
 				31045B5829FA12F900F2E9F1 /* ViewModel */,
 				31045B5729FA12F200F2E9F1 /* View */,
@@ -309,6 +308,15 @@
 				316048122A01423D00A978E9 /* SpriteKit.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		31D3DA152A03F0430036A608 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				3127B20F29FFEC9300A2A07E /* Chivo */,
+				3127B21029FFEC9300A2A07E /* Oregano */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
