@@ -15,11 +15,12 @@ struct CongratulationsView: View {
     @Binding var congratsScreen: Bool
     var body: some View {
         ZStack {
-            Color.black.opacity(0.85).edgesIgnoringSafeArea(.all)
-            VStack(spacing: 50) {
+            Color.black.opacity(0.9).edgesIgnoringSafeArea(.all)
+            VStack(spacing: -100) {
                 Text("Congratulations!")
                     .font(Font.custom("Oregano-Regular", size: 48))
-                    .foregroundColor(.white)
+                    .multilineTextAlignment(.center)
+                    .foregroundColor(.yellow)
                     .onAppear {
                         let filePath = Bundle.main.path(forResource: "congratulations", ofType: "mp3")
                         let audioNSURL = NSURL(fileURLWithPath: filePath!)
@@ -36,6 +37,11 @@ struct CongratulationsView: View {
                     Image("trophyGlow")
                     Image("trophy")
                 }
+                
+                Text("\n You got a love shot!")
+                    .font(Font.custom("Oregano-Regular", size: 38))
+                    .multilineTextAlignment(.center)
+                    .foregroundColor(.yellow)
             }
             
         }.onTapGesture {

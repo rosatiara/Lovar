@@ -26,79 +26,85 @@ struct BingoPageView: View {
                 VStack {
                     Spacer()
                         .frame(height: UIScreen.main.bounds.height * 0.1)
-                    Text("LOVE!")
-                        .font(Font.custom("Oregano-Regular", size: 48)).padding()
+                    Text("LOVE SHOT!")
+                        .font(Font.custom("Oregano-Regular", size: 36)).padding(.bottom, 30)
                         .foregroundColor(Color("darkBrown"))
                     
-                    LazyVGrid(columns: Array(repeating: .init(.fixed(UIScreen.main.bounds.width * 0.2)), count: bingoRow), spacing: 10, content: {
-                        ForEach(bingoBoard.tileCondition.indices, id: \.self) { rowIndex in
-                            ForEach(bingoBoard.tileCondition[rowIndex].indices, id: \.self) { columnIndex in
-                                if bingoBoard.tileCondition[rowIndex][columnIndex] == 0{
-                                    Rectangle()
-                                        .frame(width: UIScreen.main.bounds.width * 0.2, height: UIScreen.main.bounds.width * 0.2)
-                                        .cornerRadius(6)
-                                        .foregroundStyle(
-                                            Color("pink1").gradient.shadow(.inner(color: .black.opacity(0.5), radius: 4, x: -2, y: -2))
-                                        )
-                                        .padding(4)
-                                        .onTapGesture {
-                                            selectedRowIndex = rowIndex
-                                            selectedColumnIndex = columnIndex
-                                            showDetailView = true
-                                        }
-                                } else if bingoBoard.tileCondition[rowIndex][columnIndex] == 1 {
-                                    ZStack{
+                    ZStack {
+                        Image("bingoBoard")
+                            .resizable()
+                            .scaleEffect(1.075)
+                        LazyVGrid(columns: Array(repeating: .init(.fixed(UIScreen.main.bounds.width * 0.2)), count: bingoRow), spacing:7, content: {
+                            ForEach(bingoBoard.tileCondition.indices, id: \.self) { rowIndex in
+                                ForEach(bingoBoard.tileCondition[rowIndex].indices, id: \.self) { columnIndex in
+                                    if bingoBoard.tileCondition[rowIndex][columnIndex] == 0{
                                         Rectangle()
                                             .frame(width: UIScreen.main.bounds.width * 0.2, height: UIScreen.main.bounds.width * 0.2)
                                             .cornerRadius(6)
                                             .foregroundStyle(
-                                                Color("purple").gradient.shadow(.inner(color: .black.opacity(0.5), radius: 4, x: -2, y: -2))
+                                                Color("pink1").gradient.shadow(.inner(color: .black.opacity(0.5), radius: 4, x: -2, y: -2))
                                             )
                                             .padding(4)
-                                    }.overlay{
-                                        if bingoBoard.type[rowIndex][columnIndex] == 0 {
-                                            Image("Tree_Stamp")
-                                                .resizable()
-                                                .frame(width: 50, height: 50)
-                                        } else if bingoBoard.type[rowIndex][columnIndex] == 1 {
-                                            Image("Butterfly_Stamp")
-                                                .resizable()
-                                                .frame(width: 50, height: 50)
-                                        } else {
-                                            Image("Flower_Stamp")
-                                                .resizable()
-                                                .frame(width: 50, height: 50)
+                                            .onTapGesture {
+                                                selectedRowIndex = rowIndex
+                                                selectedColumnIndex = columnIndex
+                                                showDetailView = true
+                                            }
+                                    } else if bingoBoard.tileCondition[rowIndex][columnIndex] == 1 {
+                                        ZStack{
+                                            Rectangle()
+                                                .frame(width: UIScreen.main.bounds.width * 0.2, height: UIScreen.main.bounds.width * 0.2)
+                                                .cornerRadius(6)
+                                                .foregroundStyle(
+                                                    Color("purple").gradient.shadow(.inner(color: .black.opacity(0.5), radius: 4, x: -2, y: -2))
+                                                )
+                                                .padding(4)
+                                        }.overlay{
+                                            if bingoBoard.type[rowIndex][columnIndex] == 0 {
+                                                Image("Tree_Stamp")
+                                                    .resizable()
+                                                    .frame(width: 50, height: 50)
+                                            } else if bingoBoard.type[rowIndex][columnIndex] == 1 {
+                                                Image("Butterfly_Stamp")
+                                                    .resizable()
+                                                    .frame(width: 50, height: 50)
+                                            } else {
+                                                Image("Flower_Stamp")
+                                                    .resizable()
+                                                    .frame(width: 50, height: 50)
+                                            }
                                         }
                                     }
-                                }
-                                else { // bingo completed
-                                    ZStack {
-                                        Rectangle()
-                                            .frame(width: UIScreen.main.bounds.width * 0.2, height: UIScreen.main.bounds.width * 0.2)
-                                            .cornerRadius(6)
-                                            .foregroundStyle(
-                                                .yellow.gradient.shadow(.inner(color: .black.opacity(0.5), radius: 4, x: -2, y: -2))
-                                            )
-                                            .padding(4)
-                                    }.overlay {
-                                        if bingoBoard.type[rowIndex][columnIndex] == 0{
-                                            Image("Tree_Stamp")
-                                                .resizable()
-                                                .frame(width: 50, height: 50)
-                                        }else if bingoBoard.type[rowIndex][columnIndex] == 1{
-                                            Image("Butterfly_Stamp")
-                                                .resizable()
-                                                .frame(width: 50, height: 50)
-                                        }else{
-                                            Image("Flower_Stamp")
-                                                .resizable()
-                                                .frame(width: 50, height: 50)
+                                    else { // bingo completed
+                                        ZStack {
+                                            Rectangle()
+                                                .frame(width: UIScreen.main.bounds.width * 0.2, height: UIScreen.main.bounds.width * 0.2)
+                                                .cornerRadius(6)
+                                                .foregroundStyle(
+                                                    .yellow.gradient.shadow(.inner(color: .black.opacity(0.5), radius: 4, x: -2, y: -2))
+                                                )
+                                                .padding(4)
+                                        }.overlay {
+                                            if bingoBoard.type[rowIndex][columnIndex] == 0{
+                                                Image("Tree_Stamp")
+                                                    .resizable()
+                                                    .frame(width: 50, height: 50)
+                                            }else if bingoBoard.type[rowIndex][columnIndex] == 1{
+                                                Image("Butterfly_Stamp")
+                                                    .resizable()
+                                                    .frame(width: 50, height: 50)
+                                            }else{
+                                                Image("Flower_Stamp")
+                                                    .resizable()
+                                                    .frame(width: 50, height: 50)
+                                            }
                                         }
                                     }
                                 }
                             }
-                        }
-                    })
+                        })
+                    }
+                    
                     Image("backToGarden")
                         .scaleEffect(0.6)
                         .offset(y: 10)
