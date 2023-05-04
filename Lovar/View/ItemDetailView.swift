@@ -16,7 +16,7 @@ struct ItemDetailView: View {
     @Binding var bingoBoard: Bingo
     @Binding var userInfo: User
     
-    var flowersImg = ["daisy", "sunflowers1", "rose"]
+    var flowersImg = ["daisy", "sunflower1", "rose"]
     
     var body: some View {
         ZStack {
