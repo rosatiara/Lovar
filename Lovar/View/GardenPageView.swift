@@ -11,14 +11,12 @@ struct GardenPageView: View {
     @State var showDetailView = false
     @State private var userInfo = testUser
     
-    let screenWidth = UIScreen.main.bounds.width
-    let screenHeight = UIScreen.main.bounds.height
-    
     var body: some View {
         ZStack {
             Image("gardenEmpty")
                 .resizable()
                 .edgesIgnoringSafeArea(.all)
+            FlowersAreaView()
             VStack {
                 Rectangle()
                     .opacity(0.0001)
@@ -52,6 +50,25 @@ struct GardenPageView: View {
         let historyPageView = HistoryPageView()
         UIApplication.shared.windows.first?.rootViewController = UIHostingController(rootView: historyPageView)
         UIApplication.shared.windows.first?.makeKeyAndVisible()
+    }
+}
+
+struct FlowersAreaView: View {
+    // for setting flowers position
+    let flowersAreaWidth = UIScreen.main.bounds.width
+    let flowersAreaHeight = UIScreen.main.bounds.height * 0.3
+    var body: some View {
+        ZStack {
+            Rectangle()
+                .opacity(0.0001)
+                .frame(width: flowersAreaWidth, height: flowersAreaHeight)
+                .offset(y: flowersAreaWidth * 0.5)
+            
+            // add flowers randomly..
+            //
+            //
+            
+        }
     }
 }
 

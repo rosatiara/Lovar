@@ -16,7 +16,7 @@ struct CongratulationsView: View {
 struct CongratulationsView_Previews: PreviewProvider {
     static var previews: some View {
         ZStack {
-            Color.black.opacity(0.9).edgesIgnoringSafeArea(.all)
+            Color.black.opacity(0.7).edgesIgnoringSafeArea(.all)
             VStack(spacing: -50) {
                 Text("Congratulations!")
                     .font(Font.custom("Oregano-Regular", size: 48))
