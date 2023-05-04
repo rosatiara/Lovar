@@ -42,6 +42,8 @@
 		316048132A01423D00A978E9 /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 316048122A01423D00A978E9 /* SpriteKit.framework */; };
 		3160485C2A020D2A00A978E9 /* CongratulationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3160485B2A020D2A00A978E9 /* CongratulationsView.swift */; };
 		D9157AF82A035BFE0081AF57 /* GardenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9157AF72A035BFE0081AF57 /* GardenModel.swift */; };
+		D9157AFA2A0379000081AF57 /* BingoHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9157AF92A0379000081AF57 /* BingoHistory.swift */; };
+		D9157AFC2A0379520081AF57 /* GardenHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9157AFB2A0379520081AF57 /* GardenHistory.swift */; };
 		D9471B402A00B34E00558FB4 /* PromptListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9471B3D2A00B34E00558FB4 /* PromptListModel.swift */; };
 		D9471B412A00B34E00558FB4 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9471B3E2A00B34E00558FB4 /* UserModel.swift */; };
 		D9471B422A00B34E00558FB4 /* BingoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9471B3F2A00B34E00558FB4 /* BingoModel.swift */; };
@@ -105,6 +107,8 @@
 		316048122A01423D00A978E9 /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = System/Library/Frameworks/SpriteKit.framework; sourceTree = SDKROOT; };
 		3160485B2A020D2A00A978E9 /* CongratulationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CongratulationsView.swift; sourceTree = "<group>"; };
 		D9157AF72A035BFE0081AF57 /* GardenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GardenModel.swift; sourceTree = "<group>"; };
+		D9157AF92A0379000081AF57 /* BingoHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BingoHistory.swift; sourceTree = "<group>"; };
+		D9157AFB2A0379520081AF57 /* GardenHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GardenHistory.swift; sourceTree = "<group>"; };
 		D9471B3D2A00B34E00558FB4 /* PromptListModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PromptListModel.swift; sourceTree = "<group>"; };
 		D9471B3E2A00B34E00558FB4 /* UserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		D9471B3F2A00B34E00558FB4 /* BingoModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BingoModel.swift; sourceTree = "<group>"; };
@@ -214,6 +218,8 @@
 				D9471B3D2A00B34E00558FB4 /* PromptListModel.swift */,
 				D9471B3E2A00B34E00558FB4 /* UserModel.swift */,
 				D9157AF72A035BFE0081AF57 /* GardenModel.swift */,
+				D9157AF92A0379000081AF57 /* BingoHistory.swift */,
+				D9157AFB2A0379520081AF57 /* GardenHistory.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -449,6 +455,7 @@
 				31045B7029FA15C500F2E9F1 /* ProgressBarView.swift in Sources */,
 				31045B2929FA0D8100F2E9F1 /* ContentView.swift in Sources */,
 				D9157AF82A035BFE0081AF57 /* GardenModel.swift in Sources */,
+				D9157AFA2A0379000081AF57 /* BingoHistory.swift in Sources */,
 				31045B5E29FA140D00F2E9F1 /* OpeningPageView.swift in Sources */,
 				31045B3329FA0D8200F2E9F1 /* Lovar.xcdatamodeld in Sources */,
 				311225032A0373FD00865C49 /* SceneDelegate.swift in Sources */,
@@ -466,6 +473,7 @@
 				3112250C2A037CD700865C49 /* LoadingTimer.swift in Sources */,
 				31045B6129FA144800F2E9F1 /* HistoryPageView.swift in Sources */,
 				311225072A03742700865C49 /* CloudSharingView.swift in Sources */,
+				D9157AFC2A0379520081AF57 /* GardenHistory.swift in Sources */,
 				31045B2729FA0D8100F2E9F1 /* LovarApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
