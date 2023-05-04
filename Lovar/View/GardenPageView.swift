@@ -10,9 +10,7 @@ import SwiftUI
 struct GardenPageView: View {
     @State var showDetailView = false
     @State private var userInfo = testUser
-    
-    
-    
+
     var body: some View {
         ZStack {
             Image("gardenEmpty")
@@ -93,7 +91,7 @@ struct FlowersAreaView: View {
     var flowersWidthArea = UIScreen.main.bounds.width
     var flowersHeightArea = UIScreen.main.bounds.height * 0.3
     
-    var flowersImg = ["daisy", "sunflower1"]
+    var flowersImg = ["daisy", "sunflower1", "rose"]
     
     let flowerOffsets = testGarden.flowerOffset
     

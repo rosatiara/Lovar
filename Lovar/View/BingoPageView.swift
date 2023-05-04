@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import AVFoundation
 
 struct BingoPageView: View {
     @State var showDetailView = false
@@ -147,6 +148,7 @@ struct BingoPageView: View {
                 
                 if(congratsScreen){
                     CongratulationsView(congratsScreen: $congratsScreen)
+                    
                 }
             }
         } else {
@@ -159,6 +161,7 @@ struct BingoPageView: View {
         UIApplication.shared.windows.first?.rootViewController = UIHostingController(rootView: gardenPageView)
         UIApplication.shared.windows.first?.makeKeyAndVisible()
     }
+    
     
 }
 

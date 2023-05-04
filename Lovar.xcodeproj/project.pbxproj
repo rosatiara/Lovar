@@ -25,6 +25,9 @@
 		311224EC2A02399100865C49 /* TypeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311224EB2A02399100865C49 /* TypeDetailView.swift */; };
 		311224F02A023DBC00865C49 /* Knowledge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311224EF2A023DBC00865C49 /* Knowledge.swift */; };
 		311224F22A02B8A000865C49 /* backgroundMusic.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 311224F12A02B8A000865C49 /* backgroundMusic.mp3 */; };
+		311224F72A036E1100865C49 /* bingo.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 311224F42A036E1000865C49 /* bingo.mp3 */; };
+		311224F82A036E1100865C49 /* tileCompleted.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 311224F52A036E1000865C49 /* tileCompleted.mp3 */; };
+		311224F92A036E1100865C49 /* congratulations.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 311224F62A036E1100865C49 /* congratulations.mp3 */; };
 		31257C4229FB8E3A00467D6C /* ItemDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31257C4129FB8E3A00467D6C /* ItemDetailView.swift */; };
 		3127B21129FFEC9300A2A07E /* Chivo in Resources */ = {isa = PBXBuildFile; fileRef = 3127B20F29FFEC9300A2A07E /* Chivo */; };
 		3127B21229FFEC9300A2A07E /* Oregano in Resources */ = {isa = PBXBuildFile; fileRef = 3127B21029FFEC9300A2A07E /* Oregano */; };
@@ -78,6 +81,9 @@
 		311224EB2A02399100865C49 /* TypeDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeDetailView.swift; sourceTree = "<group>"; };
 		311224EF2A023DBC00865C49 /* Knowledge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Knowledge.swift; sourceTree = "<group>"; };
 		311224F12A02B8A000865C49 /* backgroundMusic.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = backgroundMusic.mp3; sourceTree = "<group>"; };
+		311224F42A036E1000865C49 /* bingo.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bingo.mp3; sourceTree = "<group>"; };
+		311224F52A036E1000865C49 /* tileCompleted.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = tileCompleted.mp3; sourceTree = "<group>"; };
+		311224F62A036E1100865C49 /* congratulations.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = congratulations.mp3; sourceTree = "<group>"; };
 		31257C4129FB8E3A00467D6C /* ItemDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailView.swift; sourceTree = "<group>"; };
 		3127B20F29FFEC9300A2A07E /* Chivo */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Chivo; sourceTree = "<group>"; };
 		3127B21029FFEC9300A2A07E /* Oregano */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Oregano; sourceTree = "<group>"; };
@@ -233,6 +239,9 @@
 		311224F32A02B8B000865C49 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				311224F42A036E1000865C49 /* bingo.mp3 */,
+				311224F62A036E1100865C49 /* congratulations.mp3 */,
+				311224F52A036E1000865C49 /* tileCompleted.mp3 */,
 				311224F12A02B8A000865C49 /* backgroundMusic.mp3 */,
 			);
 			path = Resources;
@@ -351,10 +360,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				316047C52A00BABF00A978E9 /* .gitignore in Resources */,
+				311224F72A036E1100865C49 /* bingo.mp3 in Resources */,
+				311224F82A036E1100865C49 /* tileCompleted.mp3 in Resources */,
 				3127B21129FFEC9300A2A07E /* Chivo in Resources */,
 				311224F22A02B8A000865C49 /* backgroundMusic.mp3 in Resources */,
 				31045B2E29FA0D8200F2E9F1 /* Preview Assets.xcassets in Resources */,
 				3127B21229FFEC9300A2A07E /* Oregano in Resources */,
+				311224F92A036E1100865C49 /* congratulations.mp3 in Resources */,
 				31045B2B29FA0D8200F2E9F1 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
