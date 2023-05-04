@@ -12,6 +12,7 @@ struct ItemDetailView: View {
     @Binding var showDetailView: Bool
     @Binding var columnIndex: Int
     @Binding var rowIndex: Int
+    @Binding var congratsScreen: Bool
     @Binding var bingoBoard: Bingo
     @Binding var userInfo: User
     
@@ -87,6 +88,7 @@ struct ItemDetailView: View {
             var bingoTemp = bingoBoard.tileCondition
             var rowBingo = true
             for j in 0..<4{
+                
                 if bingoBoard.tileCondition[i][j] == 1 || bingoBoard.tileCondition[i][j] == 2{
                     bingoTemp[i][j] = 2
                 }else{
@@ -94,8 +96,10 @@ struct ItemDetailView: View {
                     break
                 }
             }
-            if rowBingo{
+            if rowBingo && bingoBoard.tileCondition != bingoTemp{
                 bingoBoard.tileCondition = bingoTemp
+                congratsScreen = true
+                
             }
         }
         //Vertical
@@ -110,25 +114,51 @@ struct ItemDetailView: View {
                     break
                 }
             }
-            if rowBingo{
+            if rowBingo && bingoBoard.tileCondition != bingoTemp{
                 bingoBoard.tileCondition = bingoTemp
+                congratsScreen = true
+                
             }
         }
         
-        //Diagonal
+        //Diagonal Right
         
-        if ( bingoBoard.tileCondition[0][0] == 1 ||  bingoBoard.tileCondition[0][0] == 2) && ( bingoBoard.tileCondition[1][1] == 1 ||  bingoBoard.tileCondition[1][1] == 2) && ( bingoBoard.tileCondition[2][2] == 1 ||  bingoBoard.tileCondition[2][2] == 2) && ( bingoBoard.tileCondition[3][3] == 1 ||  bingoBoard.tileCondition[3][3] == 2){
-            bingoBoard.tileCondition[0][0] = 2
-            bingoBoard.tileCondition[1][1] = 2
-            bingoBoard.tileCondition[2][2] = 2
-            bingoBoard.tileCondition[3][3] = 2
+        var bingoTemp_2 = bingoBoard.tileCondition
+        var rightDiagonalBingo = true
+        
+        for i in 0..<4{
+            if bingoBoard.tileCondition[i][i] == 1 || bingoBoard.tileCondition[i][i] == 2{
+                bingoTemp_2[i][i] = 2
+            }
+            else{
+                rightDiagonalBingo = false
+                break
+            }
         }
         
-        if ( bingoBoard.tileCondition[0][3] == 1 ||  bingoBoard.tileCondition[0][3] == 2) && ( bingoBoard.tileCondition[1][2] == 1 ||  bingoBoard.tileCondition[1][2] == 2) && ( bingoBoard.tileCondition[2][1] == 1 ||  bingoBoard.tileCondition[2][1] == 2) && ( bingoBoard.tileCondition[3][0] == 1 ||  bingoBoard.tileCondition[3][0] == 2){
-            bingoBoard.tileCondition[0][3] = 2
-            bingoBoard.tileCondition[1][2] = 2
-            bingoBoard.tileCondition[2][1] = 2
-            bingoBoard.tileCondition[3][0] = 2
+        if rightDiagonalBingo && bingoTemp_2 != bingoBoard.tileCondition{
+            bingoBoard.tileCondition = bingoTemp_2
+            congratsScreen = true
+        }
+        
+        //Diagonal Left
+        
+        var bingoTemp_3 = bingoBoard.tileCondition
+        var leftDiagonalBingo = true
+        
+        for i in 0..<4{
+            if bingoBoard.tileCondition[i][3 - i] == 1 || bingoBoard.tileCondition[i][3 - i] == 2{
+                bingoTemp_3[i][3 - i] = 2
+            }
+            else{
+                leftDiagonalBingo = false
+                break
+            }
+        }
+        
+        if leftDiagonalBingo && bingoTemp_3 != bingoBoard.tileCondition{
+            bingoBoard.tileCondition = bingoTemp_3
+            congratsScreen = true
         }
 
     }
