@@ -91,9 +91,9 @@ struct FlowersAreaView: View {
     var flowersWidthArea = UIScreen.main.bounds.width
     var flowersHeightArea = UIScreen.main.bounds.height * 0.3
     
-    var flowersImg = ["daisy", "sunflower1", "rose"]
+    var flowerImages = testGarden.flowerImages
+    var flowerOffsets = testGarden.flowerOffset
     
-    let flowerOffsets = testGarden.flowerOffset
     
     var body: some View {
         ZStack {
@@ -102,8 +102,9 @@ struct FlowersAreaView: View {
                 .frame(width: flowersWidthArea, height: flowersHeightArea)
                 .offset(y: flowersWidthArea * 0.5)
             ForEach(0..<flowerOffsets.count) { index in
-                Image(flowersImg.randomElement()!)
+                testGarden.flowerImages[index]
                     .resizable()
+                    .scaledToFit()
                     .frame(width: 100, height: 100)
                     .position(
                         x: flowerOffsets[index].x,
@@ -112,6 +113,7 @@ struct FlowersAreaView: View {
             }
             
         }.frame(maxHeight: flowersHeightArea)
+            
     }
 }
 
