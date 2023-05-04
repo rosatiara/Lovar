@@ -18,7 +18,7 @@ struct GardenPageView: View {
             Image("gardenEmpty")
                 .resizable()
                 .edgesIgnoringSafeArea(.all)
-            FlowersAreaView()
+            ButterflyAreaView()
             VStack {
                 Rectangle()
                     .opacity(0.0001)
@@ -58,6 +58,7 @@ struct GardenPageView: View {
 struct ButterflyAreaView: View {
     var butterfliesWidthArea = UIScreen.main.bounds.width
     var butterfliesHeightArea = UIScreen.main.bounds.height * 0.3
+    let butterflyOffsets = testGarden.butterflyOffset
     var body: some View {
         ZStack {
             Rectangle()
@@ -65,11 +66,20 @@ struct ButterflyAreaView: View {
                 .frame(width: butterfliesWidthArea, height: butterfliesHeightArea)
                 .offset(y: butterfliesWidthArea * 0.5)
             
+            ForEach(0..<butterflyOffsets.count){ index in
+                Image("sunflower") // change to butterfly
+                    .resizable()
+                    .frame(width: 100, height: 100)
+                    .position(
+                        x: butterflyOffsets[index].x,
+                        y: butterflyOffsets[index].y
+                    )
+            }
             // add butterflies randomly..
             //
             //
             
-        }
+        }.frame(width: butterfliesWidthArea, height: butterfliesHeightArea).offset(y: -butterfliesWidthArea*0.4)
     }
     
 }

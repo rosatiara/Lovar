@@ -70,7 +70,7 @@ struct BingoPageView: View {
                                         }
                                     }
                                 }
-                                else {
+                                else { // bingo completed
                                     ZStack {
                                         Rectangle()
                                             .frame(width: UIScreen.main.bounds.width * 0.2, height: UIScreen.main.bounds.width * 0.2)
