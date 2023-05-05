@@ -96,6 +96,16 @@ struct ButterflyAreaView: View {
                         y: butterflyOffsets[index].y
                     )
             }
+            ForEach(0..<butterflyOffsets.count){ index in
+                testGarden.butterflyImages[index]
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 100, height: 90)
+                    .position(
+                        x: butterflyOffsets[index].x,
+                        y: butterflyOffsets[index].y
+                    )
+            }
             
         }.frame(width: butterfliesWidthArea, height: butterfliesHeightArea)
     }

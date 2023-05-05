@@ -25,7 +25,7 @@ struct BingoPageView: View {
                 Color("cream").edgesIgnoringSafeArea(.all)
                 VStack {
                     Spacer()
-                        .frame(height: UIScreen.main.bounds.height * 0.1)
+                        .frame(height: UIScreen.main.bounds.height * 0.125)
                     Text("LOVE SHOT!")
                         .font(Font.custom("Oregano-Regular", size: 36)).padding(.bottom, 30)
                         .foregroundColor(Color("darkBrown"))

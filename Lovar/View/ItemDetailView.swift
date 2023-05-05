@@ -49,6 +49,8 @@ struct ItemDetailView: View {
                         .font(.system(size: 28))
                         .bold()
                         .foregroundColor(Color("darkBrown"))
+                        .frame(maxWidth: UIScreen.main.bounds.width * 0.7)
+                        .multilineTextAlignment(.center)
                 }
                 Text("\(bingoBoard.description[rowIndex][columnIndex])")
                     .font(.system(size: 17))
