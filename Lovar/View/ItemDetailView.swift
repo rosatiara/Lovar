@@ -6,6 +6,9 @@
 //
 
 import SwiftUI
+import AVFoundation
+
+
 
 struct ItemDetailView: View {
     // let fact: Fact
@@ -31,27 +34,23 @@ struct ItemDetailView: View {
                 .frame(height: UIScreen.main.bounds.height * 0.65)
                 .cornerRadius(10)
                 .padding()
+                .border(.red)
             VStack {
+                Button(action: {
+                    withAnimation {
+                        showDetailView = false
+                    }
+                }, label: {
+                    Image(systemName: "xmark.circle.fill")
+                        .font(.title)
+                    
+                }).offset(x: UIScreen.main.bounds.width * 0.32, y: -UIScreen.main.bounds.height * 0.15)
                 HStack {
                     Text("\(bingoBoard.title[rowIndex][columnIndex])")
                         .font(.system(size: 28))
                         .bold()
                         .foregroundColor(Color("darkBrown"))
-                        .padding(.leading, 70)
-                        .frame(width: 250)
-                    
-                    Button(action: {
-                        withAnimation {
-                            showDetailView = false
-                        }
-                    }, label: {
-                        Image(systemName: "xmark.circle.fill")
-                            .font(.title)
-                        
-                    })
-                    .frame(maxWidth: .infinity, alignment: .trailing)
                 }
-                .padding(.trailing, 40)
                 Text("\(bingoBoard.description[rowIndex][columnIndex])")
                     .font(.system(size: 17))
                     .foregroundColor(Color("darkBrown"))

@@ -46,16 +46,17 @@ struct GardenPageView: View {
             }
             ProgressBarView()
             
-        }.onAppear{
-            Task{
-                openCount = openCount + 1
-                if openCount < 1 {
-                    try await vm.resetContact()
-                }
-                
-            }
-            
         }
+//        .onAppear{
+//            Task{
+//                openCount = openCount + 1
+//                if openCount < 1 {
+//                    try await vm.resetContact()
+//                }
+//
+//            }
+//
+//        }
         
     }
     
