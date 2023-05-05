@@ -171,6 +171,7 @@
 				31045B5729FA12F200F2E9F1 /* View */,
 				31045B5629FA12C100F2E9F1 /* Model */,
 				31045B2629FA0D8100F2E9F1 /* LovarApp.swift */,
+				311224EB2A02399100865C49 /* TypeDetailView.swift */,
 				31045B2829FA0D8100F2E9F1 /* ContentView.swift */,
 				313E20FD29FA3CC600DD5B59 /* Untitled_Artwork 3.png */,
 				31045B2A29FA0D8200F2E9F1 /* Assets.xcassets */,
@@ -232,7 +233,6 @@
 				31045B6229FA145B00F2E9F1 /* BingoPageView.swift */,
 				31257C4129FB8E3A00467D6C /* ItemDetailView.swift */,
 				3160485B2A020D2A00A978E9 /* CongratulationsView.swift */,
-				311224EB2A02399100865C49 /* TypeDetailView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";

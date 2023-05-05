@@ -19,3 +19,7 @@ struct HistoryGarden{
         self.month = month
     }
 }
+
+var testHistoryGarden = HistoryGarden(id: 0,
+                                      image: [Image("contoh_garden"), Image("contoh_garden"), Image("contoh_garden"), Image("contoh_garden")],
+                                      month: [String("January"), String("February"), String("March"), String("April")])

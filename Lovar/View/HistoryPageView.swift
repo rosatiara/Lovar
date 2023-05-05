@@ -90,12 +90,14 @@ struct GardenHistory: View {
                 .frame(width: 330, height: 512)
                 .foregroundColor(Color("historyItemsBg"))
                 .overlay(RoundedRectangle(cornerRadius: 10).stroke(Color("darkBrown"), lineWidth: 2))
-            ScrollView() {
-                let columns = Array(repeating: GridItem(.flexible()), count: 2)
+            ScrollView(.vertical, showsIndicators: false) {
+                let columns = Array(repeating: GridItem(.flexible()), count: 3)
                 LazyVGrid(columns: columns) {
                     GardenPicture()
                 }.padding(.top, 20)
+                    
             }
+            .frame(maxWidth: 300, maxHeight: 600)
         }
         
     }
@@ -104,23 +106,31 @@ struct GardenHistory: View {
 
 struct GardenPicture: View {
     var body: some View {
-        VStack {
-            ZStack {
-                //                Rectangle()
-                //                    .frame(width: 90, height: 146)
-                Image("contoh_garden") // masukkin variable garden picture di sini
-                    .resizable()
-                    .frame(width: 86, height: 142)
-                
-            }
-            Text("January")
-                .foregroundColor(Color("darkBrown"))
-                .bold()
+   
+        if testHistoryGarden.image.count == 0{
+            Text("No History")
+            .foregroundColor(Color("darkBrown"))
+            .bold()
         }
-        
+        ForEach(0..<testHistoryGarden.image.count, id: \.self) { index in
+                VStack{
+                    testHistoryGarden.image[index] // insert the garden picture variable here
+                        .resizable()
+                        .frame(width: 86, height: 142)
+                    
+                    Text("\(testHistoryGarden.month[index])")
+                    .foregroundColor(Color("darkBrown"))
+                    .bold()
+                    
+                    
+                }
+            }
+       
     }
     
 }
+
+
 
 struct BingoPicture: View {
     var body: some View {
