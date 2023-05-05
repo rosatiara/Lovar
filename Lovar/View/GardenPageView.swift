@@ -13,13 +13,22 @@ struct GardenPageView: View {
     @EnvironmentObject private var vm: ViewModel
     @State var openCount: Int = 0
     
+    @State var currentTreePhase: String = "phase1"
+    var treePhases = ["phase1", "phase2", "phase3", "phase4", "phase5"]
+    
+    @State var treePhaseIndex = testGarden.treeSizeIndex
+
     var body: some View {
+    
         ZStack {
-            Image("gardenEmpty")
+            Image("gardenWithoutTree")
                 .resizable()
                 .edgesIgnoringSafeArea(.all)
-            
-            
+                .overlay {
+                    Image(treePhases[treePhaseIndex])
+                        .offset(y: -UIScreen.main.bounds.height * 0.124)
+                        .scaleEffect(1.2)
+                }
             VStack {
                 Rectangle()
                     .opacity(0.0001)
@@ -33,7 +42,7 @@ struct GardenPageView: View {
                 Rectangle() // Bingo Rock
                     .opacity(0.0001)
                     .frame(width: 100, height: 60)
-                    .offset(x:-UIScreen.main.bounds.width * 0.02, y:-UIScreen.main.bounds.height * 0.03)
+                    .offset(x:-UIScreen.main.bounds.width * 0.02, y:-UIScreen.main.bounds.height * 0.06)
                     .onTapGesture {
                         navigateToBingoPageView()
                     }

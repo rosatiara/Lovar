@@ -18,6 +18,7 @@ struct ItemDetailView: View {
     @Binding var congratsScreen: Bool
     @Binding var bingoBoard: Bingo
     @Binding var userInfo: User
+
     
     var flowersImg = ["daisy", "sunflower1", "rose"]
     var butterfliesImg = [
@@ -26,7 +27,6 @@ struct ItemDetailView: View {
         "butterflyblue1","butterflyblue2","butterflyblue3","butterflyblue4","butterflyblue5",
         "butterflypurple1","butterflypurple2","butterflypurple3","butterflypurple4","butterflypurple5"
     ]
-    
     var body: some View {
         ZStack {
             Rectangle()
@@ -60,8 +60,8 @@ struct ItemDetailView: View {
                     .padding(.bottom, 20)
                     .padding(20)
                 Button {
-                    if bingoBoard.type[rowIndex][columnIndex] == 0{
-                        
+                    if bingoBoard.type[rowIndex][columnIndex] == 0 {
+                        testGarden.treeSizeIndex += 1
                     }else if bingoBoard.type[rowIndex][columnIndex] == 1{
                         testGarden.butterflyOffset.append(CGPoint(x: .random(in: 0..<UIScreen.main.bounds.width), y: .random(in: 0..<UIScreen.main.bounds.height * 0.5)))
                         testGarden.butterflyImages.append(Image(butterfliesImg.randomElement()!))

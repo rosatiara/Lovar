@@ -10,15 +10,15 @@ import SwiftUI
 
 struct GardenOffset{
     var id: Int
-    var treeSize: [CGFloat]
+    var treeSizeIndex: Int
     var butterflyImages: [Image]
     var butterflyOffset: [CGPoint]
     var flowerImages: [Image]
     var flowerOffset: [CGPoint]
     
-    init(id: Int, treeSize: [CGFloat], butterflyImages: [Image], butterflyOffset: [CGPoint], flowerImages: [Image], flowerOffset: [CGPoint]) {
+    init(id: Int, treeSizeIndex: Int, butterflyImages: [Image], butterflyOffset: [CGPoint], flowerImages: [Image], flowerOffset: [CGPoint]) {
         self.id = id
-        self.treeSize = treeSize
+        self.treeSizeIndex = treeSizeIndex
         self.butterflyImages = butterflyImages
         self.butterflyOffset = butterflyOffset
         self.flowerImages = flowerImages
@@ -28,4 +28,4 @@ struct GardenOffset{
 
 
 
-var testGarden = GardenOffset(id: 0, treeSize: [], butterflyImages: [], butterflyOffset: [], flowerImages: [], flowerOffset: [])
+var testGarden = GardenOffset(id: 0, treeSizeIndex: 0, butterflyImages: [], butterflyOffset: [], flowerImages: [], flowerOffset: [])
