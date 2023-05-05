@@ -34,7 +34,6 @@ struct ItemDetailView: View {
                 .frame(height: UIScreen.main.bounds.height * 0.65)
                 .cornerRadius(10)
                 .padding()
-                .border(.red)
             VStack {
                 Button(action: {
                     withAnimation {
