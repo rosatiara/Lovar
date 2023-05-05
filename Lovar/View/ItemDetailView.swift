@@ -46,14 +46,14 @@ struct ItemDetailView: View {
                 }).offset(x: UIScreen.main.bounds.width * 0.32, y: -UIScreen.main.bounds.height * 0.15)
                 HStack {
                     Text("\(bingoBoard.title[rowIndex][columnIndex])")
-                        .font(.system(size: 28))
+                        .font(.system(size: 24))
                         .bold()
                         .foregroundColor(Color("darkBrown"))
                         .frame(maxWidth: UIScreen.main.bounds.width * 0.7)
                         .multilineTextAlignment(.center)
                 }
                 Text("\(bingoBoard.description[rowIndex][columnIndex])")
-                    .font(.system(size: 17))
+                    .font(Font.custom("Chivo-Regular", size: 18))
                     .foregroundColor(Color("darkBrown"))
                     .frame(maxWidth: UIScreen.main.bounds.width * 0.7)
                     .multilineTextAlignment(.center)
@@ -80,6 +80,7 @@ struct ItemDetailView: View {
                         RoundedRectangle(cornerRadius: 10)
                             .frame(width: 120, height: 40)
                         Text("Complete")
+                            .font(Font.custom("Chivo-Regular", size: 18))
                             .bold()
                             .foregroundColor(.white)
                     }
